@@ -54,9 +54,8 @@ nav :nth-child(1) input {
   background-color: #aace9b;
 }
 section {
+  width: 2225px;
   margin-left: 335px;
-}
-#home {
   text-align: center;
 }
 #home h2 {
@@ -67,14 +66,11 @@ section {
   bottom: 21px;
   right: 33px;
 }
-#opitons {
-  width: 1105px;
-}
 #options figure {
   display: inline-block;
   text-align: center;
-  width: 50%;
-  margin: -1px;
+  width: 49%;
+  margin: 0px;
 }
 #registration {
   text-align: center;
@@ -87,19 +83,15 @@ textarea {
   display: block;
   margin: auto;
 }
-
-#about-us {
-  text-align: center;
-  align-items: center;
-}
 .rectangle {
   width: 804px;
   height: 343px;
-  background: #aace9b;
-  opacity: 0.1;
+  background-color: rgba(170, 206, 155, 0.25);
   border-radius: 5px;
+  display: inline-block;
 }
 #about-us p {
   color: #2a2a32;
-  opacity: 1;
+  margin-top: 90px;
+  margin-left: 74px;
 }
