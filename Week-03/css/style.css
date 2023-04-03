@@ -1,13 +1,10 @@
-html {
-  scroll-behavior: smooth;
-}
 header {
-  background-color: #373867;
-  height: 118px;
-  width: 100vw;
   position: fixed;
   text-align: center;
   justify-content: center;
+  height: 118px;
+  width: 100vw;
+  background-color: #373867;
 }
 header h2 {
   font-family: "Roboto";
@@ -35,26 +32,79 @@ aside #searchSidebar {
   background: #ffffff;
   border-radius: 4px;
 }
-nav :nth-child(1) {
-  margin-left: 16px;
+nav {
+  margin-bottom: 134px;
+}
+nav div {
   margin-bottom: 43px;
 }
-nav :nth-child(1) img {
-  margin-right: 22px;
-  height: 39px;
-  width: 44px;
+nav input {
   display: inline-block;
   vertical-align: middle;
-}
-nav :nth-child(1) input {
   width: 238px;
   height: 49px;
+  margin: 0px;
+  background-color: #aace9b;
+  border-radius: 10px;
+  border: none;
+
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+nav img {
   display: inline-block;
   vertical-align: middle;
-  background-color: #aace9b;
+  width: 44px;
+  height: 39px;
+  margin-left: 15px;
+  margin-right: 22px;
+}
+nav :nth-child(3) img {
+  width: 44px;
+  height: 29px;
+}
+#asideP {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 45px;
+}
+#sidebar ul{
+    margin-left: 37px;
+}
+#sidebar li{
+    margin-bottom: 39px;
+}
+#sidebar li a, #sidebar li p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: black;
+  font-weight: bold;
+}
+#sidebar a{
+    text-decoration: none;
+}
+#sidebar img{
+    width: 30px;
+    height: 30px;
+}
+#sidebar a, #sidebar img, #sidebar p{
+    vertical-align: middle;
+}
+#cajaP{
+    vertical-align: top;
+    display: inline-block;
 }
 section {
-  width: 2225px;
   margin-left: 335px;
   text-align: center;
 }
@@ -77,7 +127,7 @@ section {
   align-items: center;
   justify-content: center;
 }
-form label,
+#registration form label,
 input,
 textarea {
   display: block;
@@ -93,5 +143,37 @@ textarea {
 #about-us p {
   color: #2a2a32;
   margin-top: 90px;
-  margin-left: 74px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+#activities {
+  margin-left: 406 px;
+  text-align: left;
+}
+#activities figure {
+  display: inline-block;
+  width: 33%;
+  margin: 0px;
+}
+#membership h3:nth-of-type(1) {
+  display: inline-block;
+  background-color: #2a2a32;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+}
+#membership h3:nth-of-type(2) {
+  display: inline-block;
+  background-color: #cccbcb;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+#membership h3:nth-of-type(3) {
+  display: inline-block;
+  background-color: #ededed;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+footer {
+  margin-left: 335px;
 }
