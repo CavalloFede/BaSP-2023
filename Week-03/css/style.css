@@ -107,10 +107,14 @@ nav :nth-child(3) img {
   vertical-align: top;
   display: inline-block;
 }
-
 section {
   margin-left: 335px;
   text-align: center;
+}
+#separador{
+    width: 500px;
+    height: 5px;
+    background-color:#BEBEBE ;
 }
 #home h1 {
   text-align: center;
@@ -176,16 +180,31 @@ section {
   text-align: center;
 }
 #registration {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   margin-top: 55px;
 }
-#registration form label,
-input,
-textarea {
+#registration h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #373867;
+  margin-top: 53px;
+  margin-bottom: 90px;
+}
+#registration label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+}
+.form-structure {
   display: block;
   margin: auto;
+}
+#registration input {
+  margin-bottom: 10px;
 }
 .rectangle {
   width: 804px;
@@ -193,6 +212,14 @@ textarea {
   background-color: rgba(170, 206, 155, 0.25);
   border-radius: 5px;
   display: inline-block;
+}
+#about-us h2{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 47px;
+color: #373867;
 }
 #about-us p {
   color: #2a2a32;
@@ -203,6 +230,16 @@ textarea {
 #activities {
   margin-left: 406 px;
   text-align: left;
+}
+#activities h2 {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 47px;
+color: #373867;
+text-align: center;
+
 }
 #activities figure {
   display: inline-block;
