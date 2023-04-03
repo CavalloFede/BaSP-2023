@@ -76,13 +76,14 @@ nav :nth-child(3) img {
   line-height: 23px;
   margin-bottom: 45px;
 }
-#sidebar ul{
-    margin-left: 37px;
+#sidebar ul {
+  margin-left: 37px;
 }
-#sidebar li{
-    margin-bottom: 39px;
+#sidebar li {
+  margin-bottom: 39px;
 }
-#sidebar li a, #sidebar li p {
+#sidebar li a,
+#sidebar li p {
   font-family: "Roboto";
   font-style: normal;
   font-size: 14px;
@@ -90,26 +91,60 @@ nav :nth-child(3) img {
   color: black;
   font-weight: bold;
 }
-#sidebar a{
-    text-decoration: none;
+#sidebar a {
+  text-decoration: none;
 }
-#sidebar img{
-    width: 30px;
-    height: 30px;
+#sidebar img {
+  width: 30px;
+  height: 30px;
 }
-#sidebar a, #sidebar img, #sidebar p{
-    vertical-align: middle;
+#sidebar a,
+#sidebar img,
+#sidebar p {
+  vertical-align: middle;
 }
-#cajaP{
-    vertical-align: top;
-    display: inline-block;
+#cajaP {
+  vertical-align: top;
+  display: inline-block;
 }
+
 section {
   margin-left: 335px;
   text-align: center;
 }
+#home h1 {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #373867;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 #home h2 {
   text-transform: uppercase;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #423c3c;
+
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+#home p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #423c3c;
 }
 .logo {
   position: fixed;
@@ -121,11 +156,30 @@ section {
   text-align: center;
   width: 49%;
   margin: 0px;
+  margin-top: 32px;
+}
+#options h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#options p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
 }
 #registration {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-top: 55px;
 }
 #registration form label,
 input,
