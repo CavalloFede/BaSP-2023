@@ -111,10 +111,14 @@ section {
   margin-left: 335px;
   text-align: center;
 }
-#separador{
-    width: 500px;
-    height: 5px;
-    background-color:#BEBEBE ;
+.separador {
+  width: 500px;
+  height: 5px;
+  background-color: #bebebe;
+  margin: auto;
+}
+#home {
+  margin-top: 25px;
 }
 #home h1 {
   text-align: center;
@@ -124,7 +128,6 @@ section {
   font-size: 48px;
   line-height: 56px;
   color: #373867;
-  margin-top: 25px;
   margin-bottom: 25px;
 }
 #home h2 {
@@ -147,15 +150,18 @@ section {
   font-size: 20px;
   line-height: 23px;
   text-align: center;
-
   color: #423c3c;
+  margin-bottom: 185px;
 }
 .logo {
   position: fixed;
   bottom: 21px;
   right: 33px;
 }
-#options figure {
+#options {
+  margin-top: 32px;
+}
+.figures {
   display: inline-block;
   text-align: center;
   width: 49%;
@@ -179,8 +185,11 @@ section {
   line-height: 14px;
   text-align: center;
 }
+#options :nth-child(4) {
+  margin-bottom: 118px;
+}
 #registration {
-  margin-top: 55px;
+  margin-top: 53px;
 }
 #registration h2 {
   font-family: "Roboto";
@@ -202,9 +211,32 @@ section {
 .form-structure {
   display: block;
   margin: auto;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
-#registration input {
+.rb {
+  margin-top: 15px;
   margin-bottom: 10px;
+  text-align: left;
+}
+textarea {
+  resize: none;
+}
+#submit {
+  width: 109px;
+  height: 33px;
+  background-color: #aace9b;
+  border-radius: 10px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #2a2a32;
+  margin-top: 24px;
+  margin-bottom: 181px;
 }
 .rectangle {
   width: 804px;
@@ -213,38 +245,64 @@ section {
   border-radius: 5px;
   display: inline-block;
 }
-#about-us h2{
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 47px;
-color: #373867;
+#about-us {
+  margin-top: 133px;
+}
+#about-us h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #373867;
+  margin-bottom: 147px;
 }
 #about-us p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
   color: #2a2a32;
-  margin-top: 90px;
-  margin-left: 75px;
-  margin-right: 75px;
 }
 #activities {
-  margin-left: 406 px;
+  margin-left: 406px;
   text-align: left;
+  margin-top: 95px;
+  margin-bottom: 33px;
 }
 #activities h2 {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 47px;
-color: #373867;
-text-align: center;
-
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #373867;
+  text-align: center;
 }
 #activities figure {
   display: inline-block;
   width: 33%;
   margin: 0px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+#activities img {
+  width: 283px;
+  height: 181px;
+}
+#activities figure h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+#activities :nth-child(6) {
+  margin-bottom: 181px;
+}
+#membership {
+  margin-top: 133px;
 }
 #membership h3:nth-of-type(1) {
   display: inline-block;
