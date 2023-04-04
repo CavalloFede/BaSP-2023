@@ -63,7 +63,7 @@ nav img {
   margin-left: 15px;
   margin-right: 22px;
 }
-nav :nth-child(3) img {
+aside nav :nth-child(3) img {
   width: 44px;
   height: 29px;
 }
@@ -121,7 +121,7 @@ section {
   margin-top: 25px;
 }
 #home h1 {
-  text-align: center;
+  margin: auto;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -129,8 +129,12 @@ section {
   line-height: 56px;
   color: #373867;
   margin-bottom: 25px;
+  max-width: 500px;
+  display: block;
 }
 #home h2 {
+  max-width: 700px;
+  margin: auto;
   text-transform: uppercase;
   font-family: "Roboto";
   font-style: normal;
@@ -144,6 +148,8 @@ section {
   margin-top: 25px;
 }
 #home p {
+  max-width: 700px;
+  margin: auto;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
@@ -178,6 +184,8 @@ section {
   margin-bottom: 25px;
 }
 #options p {
+  max-width: 400px;
+  margin: auto;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -238,13 +246,6 @@ textarea {
   margin-top: 24px;
   margin-bottom: 181px;
 }
-.rectangle {
-  width: 804px;
-  height: 343px;
-  background-color: rgba(170, 206, 155, 0.25);
-  border-radius: 5px;
-  display: inline-block;
-}
 #about-us {
   margin-top: 133px;
 }
@@ -256,6 +257,14 @@ textarea {
   line-height: 47px;
   color: #373867;
   margin-bottom: 147px;
+}
+.rectangle {
+  width: 804px;
+  height: 343px;
+  background-color: rgba(170, 206, 155, 0.25);
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 181px;
 }
 #about-us p {
   font-family: "Roboto";
@@ -279,6 +288,7 @@ textarea {
   line-height: 47px;
   color: #373867;
   text-align: center;
+  margin-bottom: 96px;
 }
 #activities figure {
   display: inline-block;
@@ -303,26 +313,59 @@ textarea {
 }
 #membership {
   margin-top: 133px;
+  margin-bottom: 128px;
+  align-items: center;
 }
-#membership h3:nth-of-type(1) {
+#membership h3 {
   display: inline-block;
-  background-color: #2a2a32;
-  padding: 8px 16px;
   border-radius: 5px;
+  width: 311px;
+  height: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#membership-black {
+  background-color: #2a2a32;
   color: white;
 }
-#membership h3:nth-of-type(2) {
-  display: inline-block;
+#membership-classic {
   background-color: #cccbcb;
-  padding: 8px 16px;
-  border-radius: 5px;
 }
-#membership h3:nth-of-type(3) {
-  display: inline-block;
+#membership-only {
   background-color: #ededed;
-  padding: 8px 16px;
-  border-radius: 5px;
+}
+#membership ul {
+  max-width: 250px;
+  text-align: left;
+  margin: auto;
+}
+#membership li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 35px;
 }
 footer {
   margin-left: 335px;
+  margin-top: 128px;
+  text-align: center;
+}
+footer li {
+  display: inline-block;
+  margin-bottom: 75px;
+  margin-right: 55px;
+}
+footer img {
+  width: 24px;
+  height: 24px;
+}
+footer p {
+  display: block;
 }
