@@ -1,7 +1,6 @@
 header {
   position: fixed;
   text-align: center;
-  justify-content: center;
   height: 118px;
   width: 100vw;
   background-color: #373867;
@@ -13,6 +12,8 @@ header h2 {
   font-size: 40px;
   line-height: 47px;
   color: #ffffff;
+  display: inline-block;
+  margin-top: 57px;
 }
 main {
   padding-top: 118px;
@@ -33,7 +34,7 @@ aside #searchSidebar {
   border-radius: 4px;
 }
 nav {
-  margin-bottom: 134px;
+  margin-bottom: 450px;
 }
 nav div {
   margin-bottom: 43px;
