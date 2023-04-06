@@ -1,6 +1,6 @@
 # Readme BASP-M2023
 
-This repository is made to allocate all the work i will be doing during the course of the Bootcamp
+This repository is made to allocate all the work i will be doing during the course of the Radium Rocket Bootcamp
 
 ## [Week-02](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-02)
 
