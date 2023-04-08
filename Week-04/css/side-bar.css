@@ -1,36 +1,39 @@
 /* Estilos para dispositivos móviles (mínimo 390px y máximo 600px) */
 @media only screen and (min-width: 390px) and (max-width: 600px) {
-  #search-Sidebar {
-    display: none;
+  nav {
+    margin-bottom: 122px;
   }
   .div-Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 103px;
-    width: 103px;
+    width: 124px;
+    margin-bottom: 40px;
     background-color: #373867;
   }
   aside {
     width: 124px;
   }
-  .icon-big {
+  #search-Sidebar,
+  .icon-big,
+  .button-sidebar,
+  aside a,
+  aside p {
     display: none;
   }
-  .button-sidebar {
-    display: none;
-  }
-  #asideP {
-    display: none;
-  }
-  aside a{
-    display: none;
-  }
-  aside p{
-    display: none;
+  aside li{
+    margin-bottom: 40px;
   }
 }
 
 /* Estilos para tablets (mínimo 601px y máximo 1024px) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  #incon-search {
+  nav {
+    margin-bottom: 170px;
+  }
+  #incon-search,
+  .icon-small {
     display: none;
   }
   .div-Search {
@@ -42,9 +45,6 @@
   aside {
     width: 292px;
   }
-  .icon-small {
-    display: none;
-  }
   #search-Sidebar {
     width: 222px;
     height: 44px;
@@ -52,6 +52,14 @@
     margin-top: 53px;
     background: #ffffff;
     border-radius: 4px;
+  }
+  nav img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 48px;
+    margin-left: 15px;
+    margin-right: 9px;
   }
   nav input {
     width: 207px;
@@ -64,21 +72,31 @@
     font-weight: 700;
     line-height: 35px;
   }
+  aside nav :nth-child(3) img {
+    width: 50px;
+    height: 36px;
+  }
+  aside li img {
+    width: 26px;
+    height: 30px;
+  }
+  aside li{
+    margin-bottom: 50px;
+  }
 }
 
 /* Estilos para escritorio (a partir de 1025px) */
 @media only screen and (min-width: 1025px) {
-  #incon-search {
-    display: none;
-  }
-  aside {
-    width: 335px;
-  }
+  #incon-search,
   .icon-small {
     display: none;
   }
   aside {
+    width: 335px;
     margin-top: 118px;
+  }
+  nav {
+    margin-bottom: 139px;
   }
   #search-Sidebar {
     width: 255px;
@@ -88,6 +106,14 @@
     margin-bottom: 15px;
     background: #ffffff;
     border-radius: 4px;
+  }
+  nav img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 44px;
+    height: 39px;
+    margin-left: 15px;
+    margin-right: 22px;
   }
   nav input {
     width: 238px;
@@ -100,8 +126,18 @@
     font-weight: 700;
     line-height: 35px;
   }
+  aside nav :nth-child(3) img {
+    width: 44px;
+    height: 29px;
+  }
+  aside li img {
+    width: 30px;
+    height: 30px;
+  }
+  aside li{
+    margin-bottom: 40px;
+  }
 }
-
 aside {
   background-color: #f6f6f6;
   align-items: center;
@@ -109,28 +145,40 @@ aside {
   height: 100vh;
 }
 nav div {
-  margin-bottom: 43px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 40px;
 }
 #info-img {
+  margin: 0;
+  margin-bottom: 44px;
   width: 43px;
   height: 24px;
 }
-nav img {
-  display: inline-block;
+
+#small-mail,
+#small-tel,
+#small-home {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 40px;
+}
+.icon-small {
+  margin: auto;
+  height: 28px;
+  width: 27px;
+}
+
+aside a,
+aside img,
+aside p {
   vertical-align: middle;
-  width: 44px;
-  height: 39px;
-  margin-left: 15px;
-  margin-right: 22px;
 }
-aside nav :nth-child(3) img {
-  width: 44px;
-  height: 29px;
+#cajaP {
+  vertical-align: top;
+  display: inline-block;
 }
-aside li img{
-    width: 30px;
-    height: 30px;
+#asideP{
+    margin-bottom: 50px;
 }
