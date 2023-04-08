@@ -1,0 +1,40 @@
+@media only screen and (min-width: 390px) and (max-width: 600px) {
+  .margin {
+    margin-left: 124px;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .margin {
+    margin-left: 292px;
+  }
+  .logo {
+    width: 54px;
+    height: 63px;
+    bottom: 21px;
+    right: 33px;
+    position: fixed;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .margin {
+    margin-left: 335px;
+  }
+  .logo {
+    width: 87px;
+    height: 81px;
+    bottom: 21px;
+    right: 33px;
+    position: fixed;
+  }
+}
+
+footer {
+  background-color: red;
+  flex-grow: 1;
+  margin-left: 335px;
+}

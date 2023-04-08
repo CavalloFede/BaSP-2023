@@ -1,0 +1,40 @@
+/* Estilos para dispositivos móviles (mínimo 390px y máximo 600px) */
+@media only screen and (min-width: 390px) and (max-width: 600px) {
+  header {
+    display: none;
+  }
+  header h2{
+    display: none;
+  }
+}
+
+/* Estilos para tablets (mínimo 601px y máximo 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    display: none;
+  }
+  header h2{
+    display: none;
+  }
+}
+
+/* Estilos para escritorio (a partir de 1025px) */
+@media only screen and (min-width: 1025px) {
+  header {
+    background-color: #373867;
+    height: 118px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+header{
+    position: fixed;
+}
+header h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+}
