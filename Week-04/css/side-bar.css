@@ -22,7 +22,7 @@
   aside p {
     display: none;
   }
-  aside li{
+  aside li {
     margin-bottom: 40px;
   }
 }
@@ -80,7 +80,7 @@
     width: 26px;
     height: 30px;
   }
-  aside li{
+  aside li {
     margin-bottom: 50px;
   }
 }
@@ -134,7 +134,7 @@
     width: 30px;
     height: 30px;
   }
-  aside li{
+  aside li {
     margin-bottom: 40px;
   }
 }
@@ -178,6 +178,21 @@ aside p {
   vertical-align: top;
   display: inline-block;
 }
-#asideP{
-    margin-bottom: 50px;
+#asideP {
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+aside a {
+  text-decoration: none;
+  color: black;
+}
+aside p,
+aside a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
 }

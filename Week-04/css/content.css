@@ -5,6 +5,49 @@
   .logo {
     display: none;
   }
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 223px;
+  }
+  .section-home :nth-child(1) {
+    order: 2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    margin-bottom: 65px;
+    color: #373867;
+  }
+  .section-home :nth-child(2) {
+    width: 223px;
+    height: 189px;
+    margin-top: 109px;
+    margin-bottom: 33px;
+    order: 1;
+  }
+  .section-home :nth-child(3) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    order: 3;
+    margin-bottom: 20px;
+  }
+  .section-home :nth-child(4) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-bottom: 65px;
+    color: #574f4f;
+    order: 4;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -17,6 +60,44 @@
     bottom: 21px;
     right: 33px;
     position: fixed;
+  }
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    width: 474px;
+  }
+  .section-home :nth-child(1) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #373867;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    order: 1;
+  }
+  .section-home :nth-child(2) {
+    margin-bottom: 15px;
+    width: 474px;
+    height: 350px;
+    order: 4;
+  }
+  .section-home :nth-child(3) {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #423c3c;
+    order: 2;
+  }
+  .section-home :nth-child(4) {
+    margin-bottom: 20px;
+    font-weight: 600;
+    size: 20px;
+    line-height: 23x;
+    color: #776262;
+    order: 3;
   }
 }
 
@@ -32,10 +113,46 @@
     right: 33px;
     position: fixed;
   }
-}
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    width: 852px;
+  }
+  .section-home :nth-child(1) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #373867;
+    margin-top: 26px;
+    margin-bottom: 10px;
+  }
+  .section-home :nth-child(2) {
+    width: 852px;
+    height: 318px;
+    margin-bottom: 15px;
+  }
 
+  .section-home :nth-child(3) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #423c3c;
+    margin-bottom: 30px;
+  }
+  .section-home :nth-child(4) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #776262;
+  }
+}
+.section-home :nth-child(2) {
+  flex-grow: 1;
+}
 footer {
-  background-color: red;
   flex-grow: 1;
   margin-left: 335px;
 }
