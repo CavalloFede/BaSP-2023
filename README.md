@@ -6,8 +6,6 @@ This repository is made to allocate all the work i will be doing during the cour
 
 `In the first week we worked in figma to designe the web page that we will be making along the course of the bootcamp `
 
-This is the assignment for the second week of the Bootcamp
-
 ## [Week-02](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-02)
 
 This is the assignment for the second week of the Bootcamp
