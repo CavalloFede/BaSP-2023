@@ -28,12 +28,12 @@ This is the assignment for the fourth week of the Bootcamp
 
 ## Sections
 
-*home
-*info
-*registraion
-*about us
-*activities
-*membership
+* home
+* info
+* registraion
+* about us
+* activities
+* membership
 
 ## Autor
 
