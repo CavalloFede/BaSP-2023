@@ -1,101 +1,227 @@
-@media only screen and (min-width: 390px) and (max-width: 600px) {
-  .margin {
-    margin-left: 124px;
-  }
-  .logo {
-    display: none;
-  }
-  .section-home {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    width: 223px;
-  }
-  .section-home :nth-child(1) {
-    order: 2;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 47px;
-    text-align: center;
-    margin-bottom: 65px;
-    color: #373867;
-  }
-  .section-home :nth-child(2) {
-    width: 223px;
-    height: 189px;
-    margin-top: 109px;
-    margin-bottom: 33px;
-    order: 1;
-  }
-  .section-home :nth-child(3) {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    order: 3;
-    margin-bottom: 20px;
-  }
-  .section-home :nth-child(4) {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    margin-bottom: 65px;
-    color: #574f4f;
-    order: 4;
-  }
-  .section-options {
-    flex-direction: column;
-  }
-  .section-options figure {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .section-options h3 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-  }
-  #img-calendarg-options {
-    width: 153px;
-    height: 128px;
-  }
-  #img-calendarbw-options {
-    width: 153px;
-    height: 120px;
-  }
-  #img-membership-options {
-    width: 153px;
-    height: 142px;
-  }
-  #img-contact-options {
-    width: 153px;
-    height: 139px;
-  }
-  .section-options p {
-    display: none;
-  }
-  .section-registration{
-    flex-direction: column;
-  }
-  .section-registration form{
-    display: flex;
-    flex-direction: column;
-  }
+.logo {
+  width: 112px;
+  height: 131.84px;
+  padding-bottom: 15px;
+}
+.section-home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.section-home :nth-child(1) {
+  order: 2;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 65px;
+  color: #373867;
+}
+.section-home :nth-child(2) {
+  max-width: 223px;
+  height: 189px;
+  object-fit: contain;
+  margin-bottom: 33px;
+  order: 1;
+}
+.section-home :nth-child(3) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  order: 3;
+  margin-bottom: 20px;
+}
+.section-home :nth-child(4) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #574f4f;
+  order: 4;
+}
+.section-options figure {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section-options h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.section-options div {
+  width: 155px;
+  height: 155px;
+}
+#img-calendarg-options {
+  max-width: 153px;
+  height: 128px;
+}
+#img-calendarbw-options {
+  max-width: 153px;
+  height: 120px;
+}
+#img-membership-options {
+  max-width: 153px;
+  height: 142px;
+}
+#img-contact-options {
+  max-width: 153px;
+  height: 139px;
+}
+.section-options p {
+  display: none;
+}
+.section-registration {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+.section-registration form {
+  align-items: center;
+}
+.section-registration label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+}
+.text-input {
+  border: none;
+  width: 260px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.section-registration label,
+.section-registration input {
+  margin-bottom: 15px;
+}
+#submit {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  width: 109px;
+  height: 33px;
+  color: #2a2a32;
+  background: #aace9b;
+  border-radius: 5px;
+}
+.section-about-us h2 {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.section-about-us p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2a2a32;
+}
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  width: 324px;
+  height: 456px;
+  margin-bottom: 181px;
+  background-color: rgba(170, 206, 155, 0.25);
+  border-radius: 5px;
+  margin: auto;
+}
+.section-activities figure {
+  width: 100%;
+  align-items: center;
+}
+.section-activities figure img {
+  width: 170px;
+  height: 100px;
+  margin-right: 22px;
+}
+.section-activities {
+  margin-bottom: 200px;
+  margin-top: 175px;
+}
+.section-activities figure {
+  margin-bottom: 65px;
+}
+.section-activities h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.section-home,
+.section-options,
+.section-registration,
+.section-about-us,
+.section-activities,
+.section-membership {
+  margin-bottom: 150px;
+  margin-top: 125px;
+}
+.section-membership h3 {
+  display: inline-block;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 5px;
+  width: 220px;
+  height: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.black {
+  background-color: #2a2a32;
+  color: white;
+}
+.classic {
+  background-color: #cccbcb;
+}
+.only {
+  background-color: #ededed;
+}
+.div-black {
+  margin: auto;
+  width: 220px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.div-black li {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+footer li {
+  display: inline-block;
+}
+footer div {
+  text-align: center;
+  margin-bottom: 45px;
+}
+footer a {
+  width: 40px;
+  height: 40px;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .margin {
-    margin-left: 292px;
-  }
   .logo {
     width: 54px;
     height: 63px;
@@ -151,7 +277,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
   }
   .section-options h3 {
     font-style: normal;
@@ -183,7 +308,6 @@
   .section-home {
     display: flex;
     flex-direction: column;
-    width: 852px;
   }
   .section-home :nth-child(1) {
     font-style: normal;
@@ -195,11 +319,9 @@
     margin-bottom: 10px;
   }
   .section-home :nth-child(2) {
-    width: 852px;
-    height: 318px;
+    background-color: red;
     margin-bottom: 15px;
   }
-
   .section-home :nth-child(3) {
     font-style: normal;
     font-weight: 700;
@@ -225,7 +347,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
   }
   .section-options h3 {
     margin-top: 25px;
@@ -241,14 +362,4 @@
     font-size: 12px;
     line-height: 14px;
   }
-}
-.section-home :nth-child(2) {
-  flex-grow: 1;
-}
-.section-options {
-  display: flex;
-}
-footer {
-  flex-grow: 1;
-  margin-left: 335px;
 }

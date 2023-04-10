@@ -1,104 +1,31 @@
-/* Estilos para dispositivos móviles (mínimo 390px y máximo 600px) */
-@media only screen and (min-width: 390px) and (max-width: 600px) {
-  nav {
-    margin-bottom: 122px;
-  }
-  .div-Search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 103px;
-    width: 124px;
-    margin-bottom: 40px;
-    background-color: #373867;
-  }
-  aside {
-    width: 124px;
-  }
-  #search-Sidebar,
-  .icon-big,
-  .button-sidebar,
-  aside a,
-  aside p {
-    display: none;
-  }
-  aside li {
-    margin-bottom: 40px;
-  }
+.side-bar {
+  display: none;
 }
-
-/* Estilos para tablets (mínimo 601px y máximo 1024px) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  nav {
-    margin-bottom: 170px;
-  }
-  #incon-search,
-  .icon-small {
-    display: none;
-  }
-  .div-Search {
-    height: 160px;
-    width: 292px;
-    background-color: #373867;
-    margin-bottom: 84px;
-  }
-  aside {
-    width: 292px;
-  }
-  #search-Sidebar {
-    width: 222px;
-    height: 44px;
-    margin-left: 29px;
-    margin-top: 53px;
-    background: #ffffff;
-    border-radius: 4px;
-  }
-  nav img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    height: 48px;
-    margin-left: 15px;
-    margin-right: 9px;
-  }
-  nav input {
-    width: 207px;
-    height: 59px;
-    margin: 0px;
-    background-color: #aace9b;
-    border-radius: 10px;
-    border: none;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px;
-  }
-  aside nav :nth-child(3) img {
-    width: 50px;
-    height: 36px;
-  }
-  aside li img {
-    width: 26px;
-    height: 30px;
-  }
-  aside li {
-    margin-bottom: 50px;
-  }
+.menu-sidebar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
 }
-
-/* Estilos para escritorio (a partir de 1025px) */
+.menu-sidebar:hover {
+  cursor: pointer;
+}
 @media only screen and (min-width: 1025px) {
-  #incon-search,
-  .icon-small {
+  aside {
+    top: 0;
+  }
+  .menu-sidebar {
     display: none;
   }
-  aside {
+  .side-bar {
+    background-color: #f6f6f6;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
     width: 335px;
-    margin-top: 118px;
+    display: flex;
+    flex-direction: column;
   }
-  nav {
-    margin-bottom: 139px;
-  }
-  #search-Sidebar {
+  .search-Sidebar {
     width: 255px;
     height: 36px;
     margin-left: 40px;
@@ -107,7 +34,19 @@
     background: #ffffff;
     border-radius: 4px;
   }
-  nav img {
+  .side-bar-nav {
+    margin-bottom: 150px;
+  }
+  .side-bar-nav div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .side-bar li img {
+    width: 30px;
+    height: 30px;
+  }
+  .icon-big {
     display: inline-block;
     vertical-align: middle;
     width: 44px;
@@ -115,7 +54,11 @@
     margin-left: 15px;
     margin-right: 22px;
   }
-  nav input {
+  .incon-search,
+  .icon-small {
+    display: none;
+  }
+  .button-sidebar {
     width: 238px;
     height: 49px;
     margin: 0px;
@@ -126,73 +69,33 @@
     font-weight: 700;
     line-height: 35px;
   }
-  aside nav :nth-child(3) img {
+  .information-p {
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .side-bar-nav :nth-child(3) img {
     width: 44px;
     height: 29px;
   }
-  aside li img {
-    width: 30px;
-    height: 30px;
-  }
-  aside li {
+  .side-bar li {
     margin-bottom: 40px;
   }
-}
-aside {
-  background-color: #f6f6f6;
-  align-items: center;
-  position: fixed;
-  height: 100vh;
-}
-nav div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 40px;
-}
-#info-img {
-  margin: 0;
-  margin-bottom: 44px;
-  width: 43px;
-  height: 24px;
-}
-#small-mail,
-#small-tel,
-#small-home {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 40px;
-}
-.icon-small {
-  margin: auto;
-  height: 28px;
-  width: 27px;
-}
-
-aside a,
-aside img,
-aside p {
-  vertical-align: middle;
-}
-#cajaP {
-  vertical-align: top;
-  display: inline-block;
-}
-#asideP {
-  margin-bottom: 50px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-}
-aside a {
-  text-decoration: none;
-  color: black;
-}
-aside p,
-aside a {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  .side-bar a {
+    text-decoration: none;
+    color: black;
+  }
+  li p,
+  li a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .box-p {
+    vertical-align: top;
+    display: inline-block;
+  }
 }

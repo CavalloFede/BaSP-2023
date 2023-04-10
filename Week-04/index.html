@@ -16,36 +16,41 @@
     <title>Mega rocket SA</title>
 </head>
 
-<body class="parent">
-    <header>
-        <h2>
+<body>
+    <header class="header">
+        <h2 class="title">
             Mega rocket SA
         </h2>
     </header>
-    <main class="main">
-        <aside class="flex-column">
+
+    <!--#region sidebar  -->
+    <aside>
+        <div class="menu-sidebar">
+            <img src="../assets/img/sidebar/Burger.png" alt="menu buton">
+        </div>
+        <div class="side-bar">
             <div class="div-Search">
-                <img id="incon-search" src="../assets/img/sidebar/icon-search.png" alt="Search icon">
-                <input id="search-Sidebar" type="text" name="searchSidebar" placeholder="Search">
+                <img class="incon-search" src="../assets/img/sidebar/icon-search.png" alt="Search icon">
+                <input class="search-Sidebar" type="text" name="searchSidebar" placeholder="Search">
             </div>
-            <nav>
+            <nav class="side-bar-nav">
                 <div>
                     <img class="icon-small" src="../assets/img/sidebar/small/icono-home-small.png"
                         alt="Home icon small">
                     <img class="icon-big" src="../assets/Img/sidebar/icono-home.png" alt="Home icon">
-                    <input id="btn-home-sidebar" class="button-sidebar" type="button" value="Home">
+                    <input class="button-sidebar" type="button" value="Home">
                 </div>
                 <div>
                     <img class="icon-small" src="../assets/img/sidebar/small/icono-sing-up-small.png"
                         alt="Plus icon small">
                     <img class="icon-big" src="../assets/Img/sidebar/icono-sing-up.png" alt="Plus icon">
-                    <input id="btn-singup-sidebar" class="button-sidebar" type="button" value="Sing up">
+                    <input class="button-sidebar" type="button" value="Sing up">
                 </div>
                 <div>
                     <img class="icon-small" src="../assets/img/sidebar/small/icono-sing-in-small.png"
                         alt="Sing in icon small">
                     <img class="icon-big" src="../assets/Img/sidebar/icono-sing-in.png" alt="Sing in icon">
-                    <input id="btn-singin-sidebar" class="button-sidebar" type="button" value="Sing in">
+                    <input class="button-sidebar" type="button" value="Sing in">
                 </div>
                 <div>
                     <img class="icon-small" src="../assets/img/sidebar/small/icono-contacto-small.png"
@@ -55,7 +60,7 @@
                 </div>
             </nav>
             <img class="icon-small" id="info-img" src="../assets/img/sidebar/small/Info.png" alt="Info">
-            <p id="asideP">Information</p>
+            <p class="information-p">Information</p>
             <ul>
                 <li>
                     <img id="small-mail" class="icon-small" src="../assets/img/sidebar/small/icon-mail-small.png"
@@ -73,86 +78,193 @@
                     <img id="small-home" class="icon-small" src="../assets/img/sidebar/small/icono-home-small.png"
                         alt="Home icon small">
                     <img class="icon-big" src="../assets/img/sidebar/icono-home.png" alt="Home icon">
-                    <div id="cajaP">
+                    <div class="box-p">
                         <p>1234 Somewhere Road</p>
                         <p>#8254Nashville, TN</p>
                         <p>00000-0000</p>
                     </div>
                 </li>
             </ul>
-        </aside>
-        <div class="contenedor-general content margin">
-            <section class="child section-home">
-                <h1>Hi, and welcome to Mega Rocket SA Gym</h1>
-                <img src="../assets/img/body/Landing.png" alt="Gym equipment">
-                <h2 class="caps">a free and fully responsive site template</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis eius
-                    perspiciatis eaque fugiat porro deleniti molestias impedit nihil fugit!
-                    Facere voluptas beatae repellat fugit quas rem repudiandae id odit commodi.
-                </p>
-            </section>
-            <section class="child section-options">
-                <figure>
+        </div>
+    </aside>
+    <!--#endregion -->
+    <!-- #region body-->
+    <main class="flex-column margin main content">
+        <section class="child section-home">
+            <h1>Hi, and welcome to Mega Rocket SA Gym</h1>
+            <img src="../assets/img/body/Landing.png" alt="Gym equipment">
+            <h2 class="caps">a free and fully responsive site template</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis eius
+                perspiciatis eaque fugiat porro deleniti molestias impedit nihil fugit!
+                Facere voluptas beatae repellat fugit quas rem repudiandae id odit commodi.
+            </p>
+        </section>
+        <div class="separador"></div>
+        <section class="child flex-column section-options">
+            <figure>
+                <div>
                     <img id="img-calendarg-options" src="../assets/Img/body/calendario.png" alt="Green calendar">
-                    <h3>Appointment booking</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
-                        quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
-                        voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
-                        qui perferendis.</p>
-                </figure>
-                <figure>
+                </div>
+                <h3>Appointment booking</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
+                    quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
+                    voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
+                    qui perferendis.</p>
+            </figure>
+            <figure>
+                <div>
                     <img id="img-calendarbw-options" src="../assets/Img/body/calendario-blanco-negro.png"
                         alt="Black and white calendar">
-                    <h3>Calendar and opening hours</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
-                        quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
-                        voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
-                        qui perferendis.</p>
-                </figure>
-                <figure>
+                </div>
+                <h3>Calendar and opening hours</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
+                    quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
+                    voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
+                    qui perferendis.</p>
+            </figure>
+            <figure>
+                <div>
                     <img id="img-membership-options" src="../assets/Img/body/tarjetas.png" alt="Credit cards">
-                    <h3>Managements and membership</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
-                        quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
-                        voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
-                        qui perferendis.</p>
-                </figure>
-                <figure>
+                </div>
+                <h3>Managements and membership</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
+                    quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
+                    voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
+                    qui perferendis.</p>
+            </figure>
+            <figure>
+                <div>
                     <img id="img-contact-options" src="../assets/Img/body/form.png" alt="Contact form">
-                    <h3>Contact form and suggestions</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
-                        quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
-                        voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
-                        qui perferendis.</p>
-                </figure>
-            </section>
-            <section class="child section-registration">
-                <h2>Registration and/or claim</h2>
-                <form action="#">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name" required>
-                    <label for="last-name">Lastname</label>
-                    <input id="last-name" type="text" name="psw" required>
-                    <label for="email">Email</label>
-                    <input id="email" type="text" name="email" required>
-                    <input id="rb-membership-cost" type="radio" name="form" value="membership">
-                    <label for="rb-membership-cost">I want to know memberships and cost</label><br>
-                    <input id="rb-question" type="radio" name="form" value="question">
-                    <label for="rb-question">I want to make a question or suggestion</label><br>
-                    <input id="rb-claim" type="radio" name="form" value="claim">
+                </div>
+                <h3>Contact form and suggestions</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur
+                    quisquam voluptatum hic eum non exercitationem nobis ipsum, consequuntur
+                    voluptatibus dolores, laborum aliquam ab accusamus? Sapiente porro aliquid
+                    qui perferendis.</p>
+            </figure>
+        </section>
+        <div class="separador"></div>
+        <section class="child flex-column section-registration">
+            <h2>Registration and/or claim</h2>
+            <form class="flex-column" action="#">
+                <label for="name">Name</label>
+                <input class="text-input" id="name" type="text" name="name" required>
+                <label for="last-name">Last name</label>
+                <input class="text-input" id="last-name" type="text" name="psw" required>
+                <label  for="email">Email</label>
+                <input class="text-input" id="email" type="text" name="email" required>
+                <div>
+                    <input type="radio" name="form" value="membership">
+                    <label for="rb-membership-cost">I want to know memberships and
+                        cost</label>
+                </div>
+                <div>
+                    <input type="radio" name="form" value="question">
+                    <label for="rb-question">I want to make a question or suggestion</label>
+                </div>
+                <div>
+                    <input type="radio" name="form" value="claim">
                     <label for="rb-claim"> I want to make a claim</label>
-                    <label for="comment">Comentarios</label>
-                    <textarea id="comment" name="comment" cols="30" rows="10"></textarea>
-                    <input id="submit" type="submit" value="Send">
-                </form>
-            </section>
-        </div>
-        <img src="../assets/Img/body/Logo.png" alt="Site Logo" class="logo">
+                </div>
+                <label for="comment">Comentarios</label>
+                <textarea id="comment" name="comment" cols="30" rows="10"></textarea>
+                <input id="submit" type="submit" value="Send">
+            </form>
+        </section>
+        <div class="separador"></div>
+        <section class=".flex-column colchild section-about-us">
+            <div class="rectangle">
+                <h2>About us</h2>
+                <div class="p-rectangle">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorem
+                        autem quam sint, cupiditate ducimus quibusdam libero fuga magnam velit cum.
+                        Esse vel saepe voluptas consectetur, molestiae dicta at aliquid.</p>
+                </div>
+            </div>
+        </section>
+        <div class="separador"></div>
+        <section class="child flex-column section-activities">
+            <h2>Activities</h2>
+            <figure class="flex-row">
+                <img src="../assets/img/body/crossfit.png" alt="Crossfit">
+                <h3>Crossfit</h3>
+            </figure>
+            <figure class="flex-row">
+                <img src="../assets/img/body/functional.png" alt="Functional">
+                <h3>Functional</h3>
+            </figure>
+            <figure class="flex-row">
+                <img src="../assets/img/body/boxing.png" alt="Boxing">
+                <h3>Boxing</h3>
+            </figure>
+            <figure class="flex-row">
+                <img src="../assets/img/body/spinning.png" alt="Spinning">
+                <h3>Spinning</h3>
+            </figure>
+            <figure class="flex-row">
+                <img src="../assets/img/body/fitness.png" alt="Fitness">
+                <h3>Fitness</h3>
+            </figure>
+        </section>
+        <div class="separador"></div>
+        <section class="child flex-column content section-membership">
+            <div>
+                <h3 class="black">Black Membership</h3>
+                <div class="div-black">
+                    <ul>
+                        <li>Free access to bodybuilding</li>
+                        <li>Free access to classes prior registration</li>
+                        <li>Coach-supervised follow-up</li>
+                        <li>Grid display</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3 class="classic">Classic Membership</h3>
+                <div class="div-black">
+                    <ul>
+                        <li>Free access to the weight room</li>
+                        <li>Personalized monitoring by a coach</li>
+                        <li>Grid display</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3 class="only">Only Classes Membership</h3>
+                <div class="div-black">
+                    <ul>
+                        <li>Personalized monitoring by a coach</li>
+                        <li>Grid display</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="separador"></div>
+
+        <!--#endregion -->
     </main>
     <footer class="margin">
-        footer
+        <nav>
+            <ul>
+                <div>
+                    <li><a href="#"><img src="../assets/img/footer/Snapchat.png" alt="Snapchat"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer/WhatsApp.png" alt="WhatsApp"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer/Facebook.png" alt="Facebook"></a></li>
+                </div>
+                <div>
+                    <li><a href="#"><img src="../assets/img/footer/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer/Telegram.png" alt="Telegram"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer/LinkedIn.png" alt="LinkedIn"></a></li>
+                </div>
+                <li>
+                    <p>Rosario, Argentina </p>
+                    <p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
+                </li>
+            </ul>
+        </nav>
     </footer>
+    <img src="../assets/Img/body/Logo.png" alt="Site Logo" class="logo">
 </body>
 
 </html>
