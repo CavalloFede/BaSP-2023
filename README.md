@@ -1,6 +1,9 @@
 # Readme BASP-M2023
 
 This repository is made to allocate all the work i will be doing during the course of the Radium Rocket Bootcamp
+## Github Pages
+
+Now you can acces all the content via this [Github page](https://cavallofede.github.io/BaSP-2023/)
 
 ## Week-01
 
@@ -23,6 +26,8 @@ This is the assignment for the third week of the Bootcamp
 This is the assignment for the fourth week of the Bootcamp
 
 `In this repository you can find the HTML and CSS files for the landing page of MegaRocket SA, in this week we learned how to use flex-box and how to make a responsive site`
+
+You can also view this page via its link on the Github page [here](https://cavallofede.github.io/BaSP-2023/Week-04/)
 
 ## Sections
 
