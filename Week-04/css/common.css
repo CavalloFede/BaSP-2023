@@ -39,8 +39,7 @@ body {
   main {
     width: calc(100% - 335px);
   }
-}
-
+} 
 h2 {
   font-style: normal;
   font-weight: 700;
@@ -49,7 +48,6 @@ h2 {
   color: #373867;
   margin-bottom: 20px;
 }
-
 .separador {
   width: 60%;
   height: 5px;
