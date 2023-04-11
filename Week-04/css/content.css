@@ -329,7 +329,7 @@ footer a {
     font-size: 12px;
     line-height: 14px;
   }
- 
+
   .section-activities {
     width: 90%;
     flex-direction: column;
@@ -376,7 +376,8 @@ footer a {
     margin-bottom: 10px;
   }
   .section-home :nth-child(2) {
-    background-color: red;
+    max-width: 70%;
+    height: 356px;
     margin-bottom: 15px;
   }
   .section-home :nth-child(3) {
@@ -431,8 +432,21 @@ footer a {
     justify-content: space-around;
     width: 30%;
   }
-  .section-activities figure img{
-    width: 50%;
-    height: auto;
+  .section-activities figure img {
+    width: auto;
+    height: 181px;
+  }
+  footer ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer li {
+    margin-left: 20px;
+  }
+  footer div{
+    margin-bottom: 0;
+  }
+  footer{
+    padding-bottom: 20px;
   }
 }
