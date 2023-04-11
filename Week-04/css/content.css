@@ -429,12 +429,13 @@ footer a {
     width: 90%;
   }
   .section-activities figure {
+    width: 33%;
     justify-content: space-around;
-    width: 30%;
   }
   .section-activities figure img {
-    width: auto;
-    height: 181px;
+    width: 85%;
+    max-height: 250px;
+    object-fit: contain;
   }
   footer ul {
     flex-direction: row;
@@ -443,10 +444,10 @@ footer a {
   footer li {
     margin-left: 20px;
   }
-  footer div{
+  footer div {
     margin-bottom: 0;
   }
-  footer{
+  footer {
     padding-bottom: 20px;
   }
 }
