@@ -1,3 +1,7 @@
+img,
+input {
+  border-radius: 5px;
+}
 .logo {
   width: 112px;
   height: 131.84px;
@@ -12,7 +16,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
 .section-home :nth-child(1) {
   order: 2;
@@ -50,7 +54,7 @@
   order: 4;
 }
 .section-options figure {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -108,6 +112,14 @@
 .section-registration input {
   margin-bottom: 15px;
 }
+form div {
+  display: flex;
+  width: 100%;
+}
+textarea {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
 #submit {
   margin-top: 15px;
   font-style: normal;
@@ -143,7 +155,7 @@
   margin: auto;
 }
 .section-activities figure {
-  width: 100%;
+  width: 90%;
   align-items: center;
 }
 .section-activities figure img {
@@ -228,7 +240,26 @@ footer a {
   width: 40px;
   height: 40px;
 }
-
+@media only screen and (min-width: 601px) {
+  .section-options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .rectangle {
+    background-color: white;
+    width: 65%;
+  }
+  .p-rectangle {
+    padding: 15px;
+    padding-top: 30px;
+    height: 343px;
+    margin-bottom: 181px;
+    background-color: rgba(170, 206, 155, 0.25);
+    border-radius: 5px;
+    margin: auto;
+  }
+}
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .logo {
     width: 54px;
@@ -254,7 +285,7 @@ footer a {
   }
   .section-home :nth-child(2) {
     margin-bottom: 15px;
-    width: 474px;
+    max-width: 474px;
     height: 350px;
     order: 4;
   }
@@ -270,18 +301,15 @@ footer a {
   .section-home :nth-child(4) {
     margin-bottom: 20px;
     font-weight: 600;
-    size: 20px;
-    line-height: 23x;
+    font-size: 20px;
+    line-height: 23px;
     color: #776262;
     order: 3;
   }
-  .section-options {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
   .section-options figure {
-    width: 50%;
-    height: 400px;
+    width: 45%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,29 +329,24 @@ footer a {
     font-size: 12px;
     line-height: 14px;
   }
-  .rectangle {
-    background-color: white;
-    width: 65%;
-  }
-  .p-rectangle {
-    padding: 15px;
-    padding-top: 30px;
-    height: 343px;
-    margin-bottom: 181px;
-    background-color: rgba(170, 206, 155, 0.25);
-    border-radius: 5px;
-    margin: auto;
-  }
+ 
   .section-activities {
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
     justify-content: flex-start;
   }
   .section-activities h2 {
-    width: 100%;
+    width: 90%;
   }
   .section-activities figure {
-    width: 30%;
+    width: 90%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .section-activities figure img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
   }
 }
 
@@ -371,11 +394,11 @@ footer a {
     line-height: 23px;
     color: #776262;
   }
-  .section-options {
-    flex-wrap: wrap;
+  .section-options p {
+    display: inline;
   }
   .section-options figure {
-    width: 50%;
+    width: 45%;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -395,5 +418,21 @@ footer a {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+  }
+  .section-activities {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .section-activities h2 {
+    width: 90%;
+  }
+  .section-activities figure {
+    justify-content: space-around;
+    width: 30%;
+  }
+  .section-activities figure img{
+    width: 50%;
+    height: auto;
   }
 }

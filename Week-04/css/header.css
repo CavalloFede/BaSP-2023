@@ -1,7 +1,6 @@
 @media only screen and (min-width: 1025px) {
   .header {
     top: 0;
-    
     background-color: #373867;
     height: 118px;
     width: 100%;
@@ -10,17 +9,17 @@
     justify-content: center;
     position: fixed;
   }
-  .title{
+  .title {
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
     color: #ffffff;
     display: block;
-}
+  }
 }
 header {
   display: none;
 }
-header h2{
+header h2 {
   display: none;
 }
