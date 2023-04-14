@@ -51,7 +51,8 @@ console.log("-Exercise 5");
 /*
     5-Invertir el orden del array (utilizar reverse).
 */
-var reverseMonths = months.reverse;
+var reverseMonths = months.slice();
+reverseMonths.reverse()
 console.log(reverseMonths);
 console.log("-Exercise 6");
 /*

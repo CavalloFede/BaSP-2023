@@ -6,12 +6,23 @@ console.log("-Exercise 1");
     para mostrar una alerta utilizando cada una de 
     las palabras.
 */
+let palabras = ["hola", "mundo", "palabras", "array", "for"];
+for (let i = 0; i < palabras.length; i++) {
+  console.log(palabras[i]);
+}
+
 console.log("-Exercise 2");
 /*
     2-Al array anterior convertir la primera letra de 
     cada palabra en mayúscula y mostrar una alerta 
     por cada palabra modificada.
 */
+
+for (let i = 0; i < palabras.length; i++) {
+  let primeraLetra = palabras[i].charAt(0).toUpperCase();
+  palabras[i] = primeraLetra + palabras[i].slice(1);
+  console.log(palabras[i]);
+}
 console.log("-Exercise 3");
 /*
     3-Crear una variable llamada “sentence” que tenga un
@@ -20,6 +31,11 @@ console.log("-Exercise 3");
     dentro de la variable sentence. Al final mostrar 
     una única alerta con la cadena completa.
 */
+let sentence = "";
+for (let i = 0; i < palabras.length; i++) {
+  sentence += palabras[i] + " ";
+}
+console.log(sentence);
 console.log("-Exercise 4");
 /*
     4-Crear un array vacío y con un bucle for de 10 repeticiones.
@@ -29,3 +45,8 @@ console.log("-Exercise 4");
     número 9. Mostrar por la consola del navegador el array 
     final (utilizar console.log).
 */
+let arrayEmpty = [];
+for (var i = 0; i < 10; i++) {
+  arrayEmpty.push(i);
+}
+console.log(arrayEmpty)
