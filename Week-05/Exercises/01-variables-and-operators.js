@@ -18,7 +18,7 @@ console.log("-Exercise 2");
 var firstName = "Federico";
 var lastName = "Cavallo";
 var completeName = firstName + " " + lastName;
-console.log(completeName); 
+console.log(completeName);
 
 console.log("-Exercise 3");
 /*
@@ -29,4 +29,4 @@ console.log("-Exercise 3");
 var word1 = "Hola";
 var word2 = "Mundo";
 var sumWords = word1.length + word2.length;
-console.log(sumWords); 
+console.log(sumWords);
