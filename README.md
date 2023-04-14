@@ -31,12 +31,7 @@ This is the assignment for the second week of the Bootcamp
 
 ## Sections
 
-- Home
-- Info
-- Registraion
-- About us
-- Activities
-- Membership
+- We use the same sections as in week 01
 
 # [Week-03](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-03)
 
