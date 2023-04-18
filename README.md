@@ -86,7 +86,39 @@ You can view a preview of the page via its link on the Github page [here](https:
 - Activities
 - Membership
 
+# [Week-05](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-05)
 
+This is the assignment for the fifth week of the Bootcamp
+
+`This week, I worked on a series of exercises to learn JavaScript. The exercises covered a range of topics, including variables and operators, strings, arrays, if-else statements, for loops, and functions.`
+
+You can view a preview of the page via its link on the Github page [here](https://cavallofede.github.io/BaSP-2023/Week-05/)
+
+# Exercise Topics
+
+## Variables and Operators
+
+This exercise focused on the basics of JavaScript variables and operators. I learned about different variable types (such as strings, numbers, and booleans), how to declare and assign variables, and how to use arithmetic operators (+, -,*, /) and comparison operators (>, <, >=, <=, ==, !=) to perform basic operations.
+
+## Strings
+
+In this exercise, I learned about JavaScript strings and how to manipulate them. I learned how to create strings, how to concatenate them with the + operator, and how to access individual characters within a string using bracket notation. I also learned about some common string methods, such as length(), indexOf(), and slice().
+
+## Arrays
+
+This exercise focused on JavaScript arrays, which are used to store collections of values. I learned how to create arrays, how to access individual elements using bracket notation, and how to use common array methods such as push(), pop(), shift(), and unshift() to add or remove elements from an array.
+
+## If-Else
+
+This exercise introduced the concept of control flow in JavaScript, specifically the if-else statement. I learned how to use if-else statements to perform different actions based on different conditions. I also learned about the logical operators && (and), || (or), and ! (not), which can be used to combine multiple conditions.
+
+## For Loops
+
+For loops are a type of loop in JavaScript that allow you to perform a set of actions a certain number of times. In this exercise, I learned how to use for loops to iterate over arrays, to count from one number to another, and to perform other repetitive tasks.
+
+## Functions
+
+Functions are a fundamental building block of JavaScript, and in this exercise, I learned how to define and use functions. I learned how to create named and anonymous functions, how to pass arguments to functions, and how to use return statements to return values from functions.
 
 # Autor
 
