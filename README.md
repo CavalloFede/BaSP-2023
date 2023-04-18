@@ -86,16 +86,7 @@ You can view a preview of the page via its link on the Github page [here](https:
 - Activities
 - Membership
 
-# [Week-05](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-05)
 
-This is the assignment for the fifth week of the Bootcamp
-
-`In this repository you can find a index file and 6 js files where i will resolve multiple exercises`
-
-You can view a preview of the page via its link on the Github page [here](https://cavallofede.github.io/BaSP-2023/Week-05/)
-
-## Features
-- Use of variables
 
 # Autor
 

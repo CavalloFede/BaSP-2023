@@ -9,7 +9,6 @@ var num1 = 5;
 var num2 = 10;
 var sum = num1 + num2;
 console.log(sum);
-
 console.log("-Exercise 2");
 /*
     2-Crear dos variables de tipo String y concatenarlas 
@@ -19,7 +18,6 @@ var firstName = "Federico";
 var lastName = "Cavallo";
 var completeName = firstName + " " + lastName;
 console.log(completeName);
-
 console.log("-Exercise 3");
 /*
     3-Crear dos variables de tipo String y sumar el largo de 

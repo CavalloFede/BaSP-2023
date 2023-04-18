@@ -8,7 +8,7 @@ console.log("-Exercise 1");
 */
 let palabras = ["hola", "mundo", "palabras", "array", "for"];
 for (let i = 0; i < palabras.length; i++) {
-  console.log(palabras[i]);
+  alert(palabras[i]);
 }
 
 console.log("-Exercise 2");
@@ -21,7 +21,7 @@ console.log("-Exercise 2");
 for (let i = 0; i < palabras.length; i++) {
   let primeraLetra = palabras[i].charAt(0).toUpperCase();
   palabras[i] = primeraLetra + palabras[i].slice(1);
-  console.log(palabras[i]);
+  alert(palabras[i]);
 }
 console.log("-Exercise 3");
 /*
@@ -35,7 +35,7 @@ let sentence = "";
 for (let i = 0; i < palabras.length; i++) {
   sentence += palabras[i] + " ";
 }
-console.log(sentence);
+alert(sentence);
 console.log("-Exercise 4");
 /*
     4-Crear un array vacío y con un bucle for de 10 repeticiones.
@@ -49,4 +49,4 @@ let arrayEmpty = [];
 for (var i = 0; i < 10; i++) {
   arrayEmpty.push(i);
 }
-console.log(arrayEmpty)
+console.log(arrayEmpty);
