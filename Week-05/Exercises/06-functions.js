@@ -83,6 +83,7 @@ function isNaNorInteger(number) {
     alert("El parámetro " + number + " no es un número entero");
     return Math.round(number);
   }
+  return number
 }
 
 function sumValidOutside(a, b) {
