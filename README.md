@@ -110,7 +110,7 @@ This exercise focused on JavaScript arrays, which are used to store collections 
 
 ## If-Else
 
-This exercise introduced the concept of control flow in JavaScript, specifically the if-else statement. I learned how to use if-else statements to perform different actions based on different conditions. I also learned about the logical operators && (and), || (or), and ! (not), which can be used to combine multiple conditions.
+This exercise introduced the concept of control flow in JavaScript, specifically the if-else statement. I learned how to use if-else statements to perform different actions based on different conditions. I also learned about the logical operators && (and), ||(or), and ! (not), which can be used to combine multiple conditions.
 
 ## For Loops
 
@@ -118,7 +118,7 @@ For loops are a type of loop in JavaScript that allow you to perform a set of ac
 
 ## Functions
 
-Functions are a fundamental building block of JavaScript, and in this exercise, I learned how to define and use functions. I learned how to create named and anonymous functions, how to pass arguments to functions, and how to use return statements to return values from functions.
+Functions are a fundamental building block of JavaScript, and in this exercise, I learned how to define and use functions. I learned how to create functions, how to pass arguments to functions, and how to use return statements to return values from functions.
 
 # Autor
 
