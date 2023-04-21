@@ -1,13 +1,85 @@
+body {
+  font-family: Roboto;
+}
 main {
   margin-top: 118px;
-  font-family: Roboto;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
+  margin-top: 90px;
+  margin-bottom: 30px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
+}
+form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 425px;
+  height: 400px;
+
+  border: 1px solid #ccc;
+  border-radius: 39px;
+  box-shadow: 0px 20px 20px -2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+.form-div {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+}
+.div-check-forgot {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+form [type="text"] {
+  margin-bottom: 30px;
+}
+form [type="submit"] {
+  border-style: none;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 137px;
+  height: 47px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2a2a32;
+
+  /* Light Grayish Green - Secondary variant  color */
+
+  background: #aace9b;
+  border-radius: 5px;
+}
+.inputs {
+  width: 260px;
+  height: 47px;
+  border: 1px solid #2a2a32;
+  border-radius: 4px;
+  background-color: white;
+}
+p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
 }
