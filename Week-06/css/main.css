@@ -1,0 +1,453 @@
+img,
+input {
+  border-radius: 5px;
+}
+.logo {
+  width: 112px;
+  height: 131.84px;
+  padding-bottom: 15px;
+}
+.div-logo {
+  display: flex;
+  justify-content: center;
+}
+.section-home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+}
+.section-home :nth-child(1) {
+  order: 2;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 65px;
+  color: #373867;
+}
+.section-home :nth-child(2) {
+  max-width: 223px;
+  height: 189px;
+  object-fit: contain;
+  margin-bottom: 33px;
+  order: 1;
+}
+.section-home :nth-child(3) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  order: 3;
+  margin-bottom: 20px;
+}
+.section-home :nth-child(4) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #574f4f;
+  order: 4;
+}
+.section-options figure {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section-options h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.section-options div {
+  width: 155px;
+  height: 155px;
+}
+#img-calendarg-options {
+  max-width: 153px;
+  height: 128px;
+}
+#img-calendarbw-options {
+  max-width: 153px;
+  height: 120px;
+}
+#img-membership-options {
+  max-width: 153px;
+  height: 142px;
+}
+#img-contact-options {
+  max-width: 153px;
+  height: 139px;
+}
+.section-options p {
+  display: none;
+}
+.section-registration {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+.section-registration form {
+  align-items: center;
+}
+.section-registration label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+}
+.text-input {
+  border: none;
+  width: 260px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.section-registration label,
+.section-registration input {
+  margin-bottom: 15px;
+}
+form div {
+  display: flex;
+  width: 100%;
+}
+textarea {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+#submit {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  width: 109px;
+  height: 33px;
+  color: #2a2a32;
+  background: #aace9b;
+  border-radius: 5px;
+  border: none;
+}
+.section-about-us h2 {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.section-about-us p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2a2a32;
+}
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  width: 324px;
+  height: 456px;
+  margin-bottom: 181px;
+  background-color: rgba(170, 206, 155, 0.25);
+  border-radius: 5px;
+  margin: auto;
+}
+.section-activities figure {
+  width: 90%;
+  align-items: center;
+}
+.section-activities figure img {
+  width: 170px;
+  height: 100px;
+  margin-right: 22px;
+}
+.section-activities {
+  margin-bottom: 200px;
+  margin-top: 175px;
+}
+.section-activities figure {
+  margin-bottom: 65px;
+}
+.section-activities h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.section-home,
+.section-options,
+.section-registration,
+.section-about-us,
+.section-activities,
+.section-membership {
+  margin-bottom: 150px;
+  margin-top: 125px;
+}
+.section-membership h3 {
+  display: inline-block;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 5px;
+  width: 220px;
+  height: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.black {
+  background-color: #2a2a32;
+  color: white;
+}
+.classic {
+  background-color: #cccbcb;
+}
+.only {
+  background-color: #ededed;
+}
+.div-black {
+  margin: auto;
+  width: 220px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.div-black li {
+  margin-bottom: 10px;
+}
+footer {
+  margin-top: 85px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 45px;
+}
+footer li {
+  display: inline-block;
+}
+footer div {
+  text-align: center;
+  margin-bottom: 45px;
+}
+footer a {
+  width: 40px;
+  height: 40px;
+}
+@media only screen and (min-width: 601px) {
+  .section-options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .rectangle {
+    background-color: white;
+    width: 65%;
+  }
+  .p-rectangle {
+    padding: 15px;
+    padding-top: 30px;
+    height: 343px;
+    margin-bottom: 181px;
+    background-color: rgba(170, 206, 155, 0.25);
+    border-radius: 5px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .logo {
+    width: 54px;
+    height: 63px;
+    bottom: 21px;
+    right: 33px;
+    position: fixed;
+  }
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    width: 474px;
+  }
+  .section-home :nth-child(1) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #373867;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    order: 1;
+  }
+  .section-home :nth-child(2) {
+    margin-bottom: 15px;
+    max-width: 474px;
+    height: 350px;
+    order: 4;
+  }
+  .section-home :nth-child(3) {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #423c3c;
+    order: 2;
+  }
+  .section-home :nth-child(4) {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #776262;
+    order: 3;
+  }
+
+  .section-options figure {
+    width: 45%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .section-options h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 28px;
+  }
+  .section-options p {
+    display: inline;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .section-activities {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .section-activities h2 {
+    width: 90%;
+  }
+  .section-activities figure {
+    width: 90%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .section-activities figure img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .margin {
+    margin-left: 335px;
+    margin-top: 118px;
+  }
+  .logo {
+    width: 87px;
+    height: 81px;
+    bottom: 21px;
+    right: 33px;
+    position: fixed;
+  }
+  .section-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-home :nth-child(1) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #373867;
+    margin-top: 26px;
+    margin-bottom: 10px;
+  }
+  .section-home :nth-child(2) {
+    max-width: 70%;
+    height: 356px;
+    margin-bottom: 15px;
+  }
+  .section-home :nth-child(3) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #423c3c;
+    margin-bottom: 30px;
+  }
+  .section-home :nth-child(4) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #776262;
+  }
+  .section-options p {
+    display: inline;
+  }
+  .section-options figure {
+    width: 45%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .section-options h3 {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 28px;
+  }
+  .section-options p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .section-activities {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .section-activities h2 {
+    width: 90%;
+  }
+  .section-activities figure {
+    width: 33%;
+    justify-content: space-around;
+  }
+  .section-activities figure img {
+    width: 85%;
+    max-height: 250px;
+    object-fit: contain;
+  }
+  footer ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer li {
+    margin-left: 20px;
+  }
+  footer div {
+    margin-bottom: 0;
+  }
+  footer {
+    padding-bottom: 20px;
+  }
+}
