@@ -1,5 +1,6 @@
 body {
   font-family: Roboto;
+  overflow-y:hidden;
 }
 main {
   margin-top: 118px;
@@ -28,7 +29,7 @@ form {
   border: 1px solid #ccc;
   border-radius: 39px;
   box-shadow: 0px 20px 20px -2px rgba(0, 0, 0, 0.05);
-  outline: none;
+  border: none;
 }
 .form-div {
   margin-top: 50px;

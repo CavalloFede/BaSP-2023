@@ -1,0 +1,82 @@
+body {
+  font-family: Roboto;
+  overflow-y:hidden;
+}
+main {
+  margin-top: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  margin-top: 33px;
+  margin-bottom: 46px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 832px;
+  height: 640px;
+
+  border: 1px solid #ccc;
+  border-radius: 39px;
+  box-shadow: 0px 20px 20px -2px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+.form-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 654px;
+}
+
+.logo {
+  width: 117px;
+  height: 122px;
+  bottom: 21px;
+  right: 33px;
+  position: fixed;
+}
+
+.form-div div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+form [type="submit"] {
+  margin-top: 15px;
+  border-style: none;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 239px;
+  height: 54px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2a2a32;
+  background: #aace9b;
+  border-radius: 5px;
+}
+input {
+  width: 260px;
+  height: 47px;
+  border: 1px solid #2a2a32;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
