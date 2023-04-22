@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
     <title>Mega rocket SA</title>
 </head>
 
@@ -25,10 +26,16 @@
         <img src="/assets/img/body/logo.png" alt="Logo de la paguina">
         <form id="registroForm" action=#>
             <div class="form-div">
-                <label for="email">Email</label>
-                <input class="inputs" type="text" name="email" id="email">
-                <label for="password">Password</label>
-                <input class="inputs" type="password" name="password" id="password">
+                <div>
+                    <label for="email">Email</label>
+                    <input class="inputs" type="text" name="email" id="email">
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="inputs" type="password" name="password" id="password">
+                    <span class="error-message"></span>
+                </div>
                 <div class="div-check-forgot">
                     <div>
                         <input type="checkbox" name="remember" id="remember">
