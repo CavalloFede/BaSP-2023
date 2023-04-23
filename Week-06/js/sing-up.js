@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   const nameInput = form.querySelector("#name");
   const lastNameInput = form.querySelector("#lastName");
   const dniInput = form.querySelector("#dni");
-  const birthDateInput = form.querySelector("#birthdate");
+  const birthDateInput = form.querySelector("#birthDate");
   const phoneInput = form.querySelector("#phone");
   const addressInput = form.querySelector("#address");
   const locationInput = form.querySelector("#location");
@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
   nameInput.addEventListener("blur", validateName);
   lastNameInput.addEventListener("blur", validateLastName);
   dniInput.addEventListener("blur", validateDni);
-  //birthDateInput.addEventListener("blur",validateDate)
+  birthDateInput.addEventListener("blur", validateDate);
   phoneInput.addEventListener("blur", validatePhone);
   addressInput.addEventListener("blur", validateAddress);
   locationInput.addEventListener("blur", validateLocation);
@@ -61,7 +61,34 @@ window.addEventListener("load", function () {
   }
   function validateDate() {
     var date = birthDateInput.value;
-    console.log(date);
+    if (date.length == 10) {
+      if (date.charAt(2) == "/" && date.charAt(5) == "/") {
+        console.log("hola");
+        const dia = parseInt(date.substring(0, 2));
+        const mes = parseInt(date.substring(3, 5)) - 1; // Restar 1 al mes porque los meses en JavaScript empiezan en 0
+        const anio = parseInt(date.substring(6, 10));
+        const fecha = new Date(anio, mes, dia);
+        if (isNaN(fecha.getTime())) {
+          displayError(
+            birthDateInput,
+            "#error-birthDate",
+            "Solo se aceptan fechas con formato dd/mm/aaaa"
+          );
+        }
+      } else {
+        displayError(
+          birthDateInput,
+          "#error-birthDate",
+          "Solo se aceptan fechas con formato dd/mm/aaaa"
+        );
+      }
+    } else {
+      displayError(
+        birthDateInput,
+        "#error-birthDate",
+        "Solo se aceptan fechas con formato dd/mm/aaaa"
+      );
+    }
   }
   // función de validación para el campo de phone
   function validatePhone() {
@@ -200,8 +227,6 @@ window.addEventListener("load", function () {
   // función para mostrar un mensaje de error en el formulario
   function displayError(input, span, mensaje) {
     const errorSpan = document.querySelector(span);
-    console.log(span, errorSpan);
-
     // agrega el mensaje de error después del campo de entrada de texto
     errorSpan.textContent = mensaje;
     // agrega un evento "focus" para eliminar el mensaje de error
