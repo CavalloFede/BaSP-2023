@@ -4,15 +4,13 @@ window.addEventListener("load", function () {
   const emailError = document.querySelector("#email + .error-message");
   const passwordInput = form.querySelector("#password");
   const passError = document.querySelector("#password + .error-message");
-  const stringErrorMail = "Por favor ingrese un email válido";
+  const stringErrorMail = "Invalid email format";
   const stringErrorPass =
-    "La contraseña debe tener al menos 8 caracteres y contener números y letras";
-  // Función para validar el formato del email
+    "Password must be at least 8 characters and contain numbers and letters";
   function validarEmail(email) {
     const re = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     return re.test(email);
   }
-  // Función para validar la password
   function validarPassword(password) {
     let hasLetter = false;
     let hasNumber = false;
@@ -30,25 +28,20 @@ window.addEventListener("load", function () {
     }
     return hasLetter && hasNumber && hasLength;
   }
-  // Evento onBlur del input email
   emailInput.addEventListener("blur", function () {
     if (!validarEmail(emailInput.value)) {
       emailInput.classList.add("error");
       emailError.textContent = stringErrorMail;
     }
   });
-
-  // Evento onBlur del input password
   passwordInput.addEventListener("blur", function () {
     if (!validarPassword(passwordInput.value)) {
       passwordInput.classList.add("error");
       passError.textContent = stringErrorPass;
     }
   });
-  // Evento onFocus de los inputs
   emailInput.addEventListener("focus", limpiarErrores);
   passwordInput.addEventListener("focus", limpiarErrores);
-  // Función para limpiar los mensajes de error
   function limpiarErrores() {
     this.classList.remove("error");
     if (this.id == "email") {
@@ -57,41 +50,35 @@ window.addEventListener("load", function () {
       passError.textContent = "";
     }
   }
-  // Evento onSubmit del formulario
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    // Validar email
     if (!validarEmail(emailInput.value)) {
       emailInput.classList.add("error");
       emailError.textContent = stringErrorMail;
     }
-    // Validar password
     if (!validarPassword(passwordInput.value)) {
       passwordInput.classList.add("error");
       passError.textContent = stringErrorPass;
     }
-    // Si hay errores, mostrar alerta y los campos del formulario
     if (
       emailInput.classList.contains("error") ||
       passwordInput.classList.contains("error")
     ) {
-      console.log(emailError.value);
       alert(
-        "Por favor corrija los errores en el formulario antes de enviarlo:\n" +
+        "Please correct any errors in the form before submitting it:\n" +
           emailError.textContent +
           "\n" +
           passError.textContent +
-          "\n\nCorreo electrónico: " +
+          "\n\nEmail: " +
           emailInput.value +
-          "\nContraseña: " +
+          "\nPassword: " +
           passwordInput.value
       );
     } else {
-      // Si no hay errores, mostramos los datos del formulario en un alert
       alert(
-        "Datos del formulario: \nCorreo electrónico: " +
+        "Form data: \nEmail: " +
           emailInput.value +
-          "\nContraseña: " +
+          "\nPassword: " +
           passwordInput.value
       );
     }
