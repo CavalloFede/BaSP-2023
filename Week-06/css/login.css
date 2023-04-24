@@ -1,6 +1,6 @@
 body {
   font-family: Roboto;
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 main {
   margin-top: 118px;
@@ -24,7 +24,7 @@ form {
   flex-direction: column;
   align-items: center;
   width: 425px;
-  height: 450px;
+  height: auto;
 
   border: 1px solid #ccc;
   border-radius: 39px;
@@ -83,8 +83,9 @@ p {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 25px;
 }
-.error-message{
-    margin-bottom: 5px;
-    margin-top: 5px;
+.error-message {
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
