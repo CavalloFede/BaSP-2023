@@ -98,7 +98,7 @@ You can view a preview of the page via its link on the Github page [here](https:
 
 ## Variables and Operators
 
-This exercise focused on the basics of JavaScript variables and operators. I learned about different variable types (such as strings, numbers, and booleans), how to declare and assign variables, and how to use arithmetic operators (+, -,*, /) and comparison operators (>, <, >=, <=, ==, !=) to perform basic operations.
+This exercise focused on the basics of JavaScript variables and operators. I learned about different variable types (such as strings, numbers, and booleans), how to declare and assign variables, and how to use arithmetic operators (+, -,\*, /) and comparison operators (>, <, >=, <=, ==, !=) to perform basic operations.
 
 ## Strings
 
@@ -120,6 +120,34 @@ For loops are a type of loop in JavaScript that allow you to perform a set of ac
 
 Functions are a fundamental building block of JavaScript, and in this exercise, I learned how to define and use functions. I learned how to create functions, how to pass arguments to functions, and how to use return statements to return values from functions.
 
-# Autor
+# [Week-06](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-06)
+
+This is the assignment for the sixth week of the Bootcamp
+
+`This project was created as part of week 6 of a bootcamp to create a login and register page for a gym website. The main goal was to use HTML, CSS, and JS to create interactive pages that allow users to register and log in. This project does not store user information, it only verifies that input fields are valid and displays error messages if they are not.`
+
+You can view a and use the page via its link on the Github page [here](https://cavallofede.github.io/BaSP-2023/Week-06/views/)
+
+## Technologies Used
+
+This project was created using the following technologies:
+
+- HTML
+- CSS
+- JavaScript
+
+## Functions Used
+
+This project utilizes functions to validate that all data passed validation. These functions check that the input fields contain the correct type of data (e.g., email address, password), and displays error messages if the input is invalid.
+
+## Navigation
+
+This project has implemented navigation between the login and register pages using buttons and hyperlinks. Users can move back and forth between the pages by clicking on the appropriate buttons.
+
+
+# Contact Information
+If you have any questions or comments about this project, you can contact me through my [GitHub profile](https://github.com/CavalloFede) or my [Linkedin](https://www.linkedin.com/in/federico-cavallo-831598193/).
+
+## Autor
 
 Federico Cavallo
