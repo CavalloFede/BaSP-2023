@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
   const emailInput = form.querySelector("#email");
   const passwordInput = form.querySelector("#password");
   const confirmPasswordInput = form.querySelector("#confirmPassword");
+  const urlApi = "https://api-rest-server.vercel.app/signup?";
   //#region Funciones
   function onlyLeters(word) {
     for (var i = 0; i < word.length; i++) {
@@ -83,7 +84,7 @@ window.addEventListener("load", function () {
   emailInput.addEventListener("blur", validateEmail);
   passwordInput.addEventListener("blur", validatePassword);
   confirmPasswordInput.addEventListener("blur", validateConfirmPassword);
-  
+
   errorSpanName = document.querySelector("#error-name");
   errorSpanLastName = document.querySelector("#error-lastName");
   errorSpanDni = document.querySelector("#error-dni");
@@ -118,11 +119,11 @@ window.addEventListener("load", function () {
   }
   function validateDni() {
     var dni = dniInput.value.trim();
-    if (!onlyNumbers(dni) || dni.length < 7) {
+    if (!onlyNumbers(dni) || dni.length < 7 || dni.length < 9) {
       displayError(
         dniInput,
         errorSpanDni,
-        "DNI needs to be only numbers and be at leasst 7 characters long"
+        "DNI needs to be only numbers and must have between 7 and 8 numbers"
       );
     }
   }
@@ -267,7 +268,7 @@ window.addEventListener("load", function () {
     if (errorSpanLocation.textContent != "") {
       return true;
     }
-    if (errorSpanZipCode.textContent !=  "") {
+    if (errorSpanZipCode.textContent != "") {
       return true;
     }
     if (errorSpanEmail.textContent != "") {
@@ -284,6 +285,19 @@ window.addEventListener("load", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     validateAll();
+    const datosFormulario = {
+      name: nameInput.value,
+      lastName: lastNameInput.value,
+      dni: dniInput.value,
+      dob: birthDateInput.value,
+      phone: phoneInput.value,
+      address: addressInput.value,
+      city: locationInput.value,
+      zip: zipCodeInput.value,
+      email: emailInput.value,
+      password: passwordInput.value,
+      confirmPassword: confirmPasswordInput.value,
+    };
     if (checkErrors()) {
       alert(
         "Please correct any errors in the form before submitting it:\n" +
@@ -309,54 +323,103 @@ window.addEventListener("load", function () {
           "\n" +
           errorSpanConfirmPassword.textContent +
           "\n\nName: " +
-          nameInput.value +
+          datosFormulario.name +
           "\nLastname: " +
-          lastNameInput.value +
+          datosFormulario.lastName +
           "\nDNI: " +
-          dniInput.value +
+          datosFormulario.dni +
           "\nBirthDate: " +
-          birthDateInput.value +
+          datosFormulario.dob +
           "\nPhone: " +
-          phoneInput.value +
+          datosFormulario.phone +
           "\nAddress: " +
-          addressInput.value +
+          datosFormulario.address +
           "\nLocation: " +
-          locationInput.value +
+          datosFormulario.location +
           "\nZipCode: " +
-          zipCodeInput.value +
+          datosFormulario.zip +
           "\nEmail: " +
-          emailInput.value +
+          datosFormulario.email +
           "\nPassword: " +
-          passwordInput.value +
+          datosFormulario.password +
           "\nConfirm Password: " +
-          confirmPasswordInput.value
+          datosFormulario.confirmPassword
       );
     } else {
-      alert(
-        "Name: " +
-          nameInput.value +
-          "\nLastname: " +
-          lastNameInput.value +
-          "\nDNI: " +
-          dniInput.value +
-          "\nBirthDate: " +
-          birthDateInput.value +
-          "\nPhone: " +
-          phoneInput.value +
-          "\nAddress: " +
-          addressInput.value +
-          "\nLocation: " +
-          locationInput.value +
-          "\nZipCode: " +
-          zipCodeInput.value +
-          "\nEmail: " +
-          emailInput.value +
-          "\nPassword: " +
-          passwordInput.value +
-          "\nConfirm Password: " +
-          confirmPasswordInput.value
-      );
+      const queryString =
+        "name=" + datosFormulario.name +
+        "&lastName=" + datosFormulario.lastName +
+        "&dni=" + datosFormulario.dni +
+        "&dob=" + datosFormulario.dob +
+        "&phone=" + datosFormulario.phone +
+        "&address=" + datosFormulario.address +
+        "&city=" + datosFormulario.city +
+        "&zip=" + datosFormulario.zip +
+        "&email=" + datosFormulario.email +
+        "&password=" + datosFormulario.password;
+
+      fetch(urlApi + queryString, {
+        method: "GET",
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          if (data.success) {
+            alert("Succes: " + data.msg);
+          } else {
+            let errorMsg = "";
+            data.errors.forEach(function (error) {
+              errorMsg += error.msg + "\n";
+            });
+            alert("Errors:\n" + errorMsg);
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+          alert("Something went wrong");
+        });
     }
   });
   //#endregion
 });
+
+errors = [
+  {
+    value: "Federico ",
+    msg: "Name must have only letters",
+    param: "name",
+    location: "query",
+  },
+  {
+    value: "1234567890",
+    msg: "DNI must have between 7 and 8 numbers",
+    param: "dni",
+    location: "query",
+  },
+];
+
+alert(
+  "Name: " +
+    nameInput.value +
+    "\nLastname: " +
+    lastNameInput.value +
+    "\nDNI: " +
+    dniInput.value +
+    "\nBirthDate: " +
+    birthDateInput.value +
+    "\nPhone: " +
+    phoneInput.value +
+    "\nAddress: " +
+    addressInput.value +
+    "\nLocation: " +
+    locationInput.value +
+    "\nZipCode: " +
+    zipCodeInput.value +
+    "\nEmail: " +
+    emailInput.value +
+    "\nPassword: " +
+    passwordInput.value +
+    "\nConfirm Password: " +
+    confirmPasswordInput.value
+);

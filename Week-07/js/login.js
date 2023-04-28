@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
   const stringErrorMail = "Invalid email format";
   const stringErrorPass =
     "Password must be at least 8 characters and contain numbers and letters";
-  const urlApi = "https://api-rest-server.vercel.app/login";
+  const urlApi = "https://api-rest-server.vercel.app/login?";
   function validarEmail(email) {
     const re = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     return re.test(email);
@@ -53,11 +53,15 @@ window.addEventListener("load", function () {
   }
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    if (!validarEmail(emailInput.value)) {
+    const datosFormulario = {
+      email: emailInput.value,
+      password: passwordInput.value,
+    };
+    if (!validarEmail(datosFormulario.email)) {
       emailInput.classList.add("error");
       emailError.textContent = stringErrorMail;
     }
-    if (!validarPassword(passwordInput.value)) {
+    if (!validarPassword(datosFormulario.password)) {
       passwordInput.classList.add("error");
       passError.textContent = stringErrorPass;
     }
@@ -71,18 +75,16 @@ window.addEventListener("load", function () {
           "\n" +
           passError.textContent +
           "\n\nEmail: " +
-          emailInput.value +
+          datosFormulario.email +
           "\nPassword: " +
-          passwordInput.value
+          datosFormulario.password
       );
     } else {
-      const datosFormulario = {
-        email: emailInput.value,
-        password: passwordInput.value,
-      };
       const queryString = `email=${datosFormulario.email}&password=${datosFormulario.password}`;
 
-      fetch(`https://api-rest-server.vercel.app/login?${queryString}`)
+      fetch(urlApi + queryString, {
+        method: "GET",
+      })
         .then(function (response) {
           return response.json();
         })
@@ -90,7 +92,7 @@ window.addEventListener("load", function () {
           if (data.success) {
             alert("Succes: " + data.msg);
           } else {
-            alert("Error: " + data.msg);
+            alert("Error: " + data);
           }
         })
         .catch(function (error) {
