@@ -119,7 +119,7 @@ window.addEventListener("load", function () {
   }
   function validateDni() {
     var dni = dniInput.value.trim();
-    if (!onlyNumbers(dni) || (dni.length < 7 || dni.length > 8)) {
+    if (!onlyNumbers(dni) || dni.length < 7 || dni.length > 8) {
       displayError(
         dniInput,
         errorSpanDni,
@@ -347,16 +347,26 @@ window.addEventListener("load", function () {
       );
     } else {
       const queryString =
-        "name=" + datosFormulario.name +
-        "&lastName=" + datosFormulario.lastName +
-        "&dni=" + datosFormulario.dni +
-        "&dob=" + datosFormulario.dob +
-        "&phone=" + datosFormulario.phone +
-        "&address=" + datosFormulario.address +
-        "&city=" + datosFormulario.city +
-        "&zip=" + datosFormulario.zip +
-        "&email=" + datosFormulario.email +
-        "&password=" + datosFormulario.password;
+        "name=" +
+        datosFormulario.name +
+        "&lastName=" +
+        datosFormulario.lastName +
+        "&dni=" +
+        datosFormulario.dni +
+        "&dob=" +
+        datosFormulario.dob +
+        "&phone=" +
+        datosFormulario.phone +
+        "&address=" +
+        datosFormulario.address +
+        "&city=" +
+        datosFormulario.city +
+        "&zip=" +
+        datosFormulario.zip +
+        "&email=" +
+        datosFormulario.email +
+        "&password=" +
+        datosFormulario.password;
 
       fetch(urlApi + queryString, {
         method: "GET",
@@ -367,8 +377,8 @@ window.addEventListener("load", function () {
         .then(function (data) {
           if (data.success) {
             alert("Succes: " + data.msg);
-            localStorage.setItem("employeeData", JSON.stringify(data.data));
-            
+            localStorage.setItem("user", JSON.stringify(data.data));
+            window.location.href = "login.html";
           } else {
             let errorMsg = "";
             data.errors.forEach(function (error) {

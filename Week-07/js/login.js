@@ -8,6 +8,13 @@ window.addEventListener("load", function () {
   const stringErrorPass =
     "Password must be at least 8 characters and contain numbers and letters";
   const urlApi = "https://api-rest-server.vercel.app/login?";
+  const userData = this.localStorage.getItem("user");
+  if (userData) {
+    const user = JSON.parse(userData);
+    emailInput.value = user.email;
+    passwordInput.value = user.password;
+    localStorage.removeItem("user");
+  }
   function validarEmail(email) {
     const re = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     return re.test(email);
