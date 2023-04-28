@@ -7,6 +7,7 @@ window.addEventListener("load", function () {
   const stringErrorMail = "Invalid email format";
   const stringErrorPass =
     "Password must be at least 8 characters and contain numbers and letters";
+  const urlApi = "https://api-rest-server.vercel.app/login";
   function validarEmail(email) {
     const re = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     return re.test(email);
@@ -75,12 +76,27 @@ window.addEventListener("load", function () {
           passwordInput.value
       );
     } else {
-      alert(
-        "Form data: \nEmail: " +
-          emailInput.value +
-          "\nPassword: " +
-          passwordInput.value
-      );
+      const datosFormulario = {
+        email: emailInput.value,
+        password: passwordInput.value,
+      };
+      const queryString = `email=${datosFormulario.email}&password=${datosFormulario.password}`;
+
+      fetch(`https://api-rest-server.vercel.app/login?${queryString}`)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          if (data.success) {
+            alert("Succes: " + data.msg);
+          } else {
+            alert("Error: " + data.msg);
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+          alert("Something went wrong");
+        });
     }
   });
 });
