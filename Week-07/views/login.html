@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
+    <title>Mega rocket SA</title>
+</head>
+
+<body>
+    <header class="header-login">
+        <h2 class="title-login">
+            Mega rocket SA
+        </h2>
+    </header>
+    <main>
+        <h1>Log In</h1>
+        <img src="../../assets/img/body/logo.png" alt="Logo de la paguina">
+        <form id="registroForm">
+            <div class="form-div">
+                <div>
+                    <label for="email">Email</label>
+                    <input class="inputs" type="text" name="email" id="email">
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="inputs" type="password" name="password" id="password">
+                    <span class="error-message"></span>
+                </div>
+                <div class="div-check-forgot">
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <label><a href=#>Forgot password?</a></label>
+                </div>
+            </div>
+            <input type="submit" value="Continue">
+            <p>Are you new here? <a href="sing-up.html">Register</a></p>
+            <p><a href="index.html">Home</a></p>
+        </form>
+    </main>
+</body>
+
+</html>
