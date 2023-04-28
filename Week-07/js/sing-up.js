@@ -119,7 +119,7 @@ window.addEventListener("load", function () {
   }
   function validateDni() {
     var dni = dniInput.value.trim();
-    if (!onlyNumbers(dni) || dni.length < 7 || dni.length < 9) {
+    if (!onlyNumbers(dni) || (dni.length < 7 || dni.length > 8)) {
       displayError(
         dniInput,
         errorSpanDni,
@@ -367,6 +367,8 @@ window.addEventListener("load", function () {
         .then(function (data) {
           if (data.success) {
             alert("Succes: " + data.msg);
+            localStorage.setItem("employeeData", JSON.stringify(data.data));
+            
           } else {
             let errorMsg = "";
             data.errors.forEach(function (error) {
@@ -383,43 +385,3 @@ window.addEventListener("load", function () {
   });
   //#endregion
 });
-
-errors = [
-  {
-    value: "Federico ",
-    msg: "Name must have only letters",
-    param: "name",
-    location: "query",
-  },
-  {
-    value: "1234567890",
-    msg: "DNI must have between 7 and 8 numbers",
-    param: "dni",
-    location: "query",
-  },
-];
-
-alert(
-  "Name: " +
-    nameInput.value +
-    "\nLastname: " +
-    lastNameInput.value +
-    "\nDNI: " +
-    dniInput.value +
-    "\nBirthDate: " +
-    birthDateInput.value +
-    "\nPhone: " +
-    phoneInput.value +
-    "\nAddress: " +
-    addressInput.value +
-    "\nLocation: " +
-    locationInput.value +
-    "\nZipCode: " +
-    zipCodeInput.value +
-    "\nEmail: " +
-    emailInput.value +
-    "\nPassword: " +
-    passwordInput.value +
-    "\nConfirm Password: " +
-    confirmPasswordInput.value
-);
