@@ -144,6 +144,29 @@ This project utilizes functions to validate that all data passed validation. The
 
 This project has implemented navigation between the login and register pages using buttons and hyperlinks. Users can move back and forth between the pages by clicking on the appropriate buttons.
 
+# [Week-07](https://github.com/CavalloFede/BaSP-2023/tree/master/Week-07)
+
+This is the assignment for the seventh week of the Bootcamp
+
+`This project was created as part of week 7 of a bootcamp to extend the functionality of the login and register pages created in week 6. The main goal was to use JavaScript to send form data to a web server via an HTTP request, only if the input data passes validation. If the HTTP request is successful, the server responds with the data that was sent, and the client displays a success message. If the HTTP request fails, the client displays an error message.`
+
+You can view the page via its link on the Github page [here](https://cavallofede.github.io/BaSP-2023/Week-07/views/)
+
+## Technologies Used
+
+This project was created using the following technologies:
+
+- HTML
+- CSS
+- JavaScript
+
+## HTTP Request
+
+This project utilizes JavaScript's Fetch API to send an HTTP request to the server, passing form data as query parameters. The server responds with a success or error message, which is then displayed on the client side.
+
+## LocalStorage
+
+For the Signup page, this project utilizes LocalStorage to store the data obtained from a successful HTTP request. The stored data is then loaded into the corresponding input fields when the page is refreshed.
 
 # Contact Information
 If you have any questions or comments about this project, you can contact me through my [GitHub profile](https://github.com/CavalloFede) or my [Linkedin](https://www.linkedin.com/in/federico-cavallo-831598193/).
