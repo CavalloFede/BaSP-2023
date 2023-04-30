@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
   const passwordInput = form.querySelector("#password");
   const confirmPasswordInput = form.querySelector("#confirmPassword");
   const urlApi = "https://api-rest-server.vercel.app/signup?";
-  //#region Funciones
   function onlyLeters(word) {
     for (var i = 0; i < word.length; i++) {
       var leter = word.charAt(i);
@@ -69,10 +68,10 @@ window.addEventListener("load", function () {
     const errorSpan = span;
     errorSpan.textContent = mensaje;
     input.addEventListener("focus", function () {
+      input.classList.remove("error");
       errorSpan.textContent = "";
     });
   }
-  //#endregion
   nameInput.addEventListener("blur", validateName);
   lastNameInput.addEventListener("blur", validateLastName);
   dniInput.addEventListener("blur", validateDni);
@@ -84,7 +83,6 @@ window.addEventListener("load", function () {
   emailInput.addEventListener("blur", validateEmail);
   passwordInput.addEventListener("blur", validatePassword);
   confirmPasswordInput.addEventListener("blur", validateConfirmPassword);
-
   errorSpanName = document.querySelector("#error-name");
   errorSpanLastName = document.querySelector("#error-lastName");
   errorSpanDni = document.querySelector("#error-dni");
@@ -96,30 +94,32 @@ window.addEventListener("load", function () {
   errorSpanEmail = document.querySelector("#error-email");
   errorSpanPassword = document.querySelector("#error-password");
   errorSpanConfirmPassword = document.querySelector("#error-confirmPassword");
-  //#region Validaciones
   function validateName() {
     var name = nameInput.value.trim();
-    if (!onlyLeters(name) || name.length < 3) {
+    if (!onlyLeters(name) || name.length < 3 || name.length > 20) {
+      nameInput.classList.add("error");
       displayError(
         nameInput,
         errorSpanName,
-        "The name needs to be only leters and have at least 3 characters long"
+        "The name needs to be only leters and have at least 3 characters long and cant be longer than 20"
       );
     }
   }
   function validateLastName() {
     var lastName = lastNameInput.value.trim();
-    if (!onlyLeters(lastName) || lastName.length < 3) {
+    if (!onlyLeters(lastName) || lastName.length < 3 || lastName.length > 20) {
+      lastNameInput.classList.add("error");
       displayError(
         lastNameInput,
         errorSpanLastName,
-        "The lastname needs to be only leters and have at least 3 characters long"
+        "The lastname needs to be only leters and have at least 3 characters long and cant be longer than 20"
       );
     }
   }
   function validateDni() {
     var dni = dniInput.value.trim();
     if (!onlyNumbers(dni) || dni.length < 7 || dni.length > 8) {
+      dniInput.classList.add("error");
       displayError(
         dniInput,
         errorSpanDni,
@@ -134,23 +134,35 @@ window.addEventListener("load", function () {
         const dia = parseInt(date.substring(0, 2));
         const mes = parseInt(date.substring(3, 5)) - 1;
         const anio = parseInt(date.substring(6, 10));
-        const fecha = new Date(anio, mes, dia);
-        if (anio >= 1920 && Date.now() > fecha.getTime()) {
-          if (isNaN(fecha.getTime())) {
+        if (onlyNumbers(dia) || onlyNumbers(mes) || onlyNumbers(anio)) {
+          const fecha = new Date(anio, mes, dia);
+          if (anio >= 1920 && Date.now() > fecha.getTime()) {
+            if (isNaN(fecha.getTime())) {
+              birthDateInput.classList.add("error");
+              displayError(
+                birthDateInput,
+                errorSpanDate,
+                "The only dates formats acceptable is dd/mm/aaaa"
+              );
+            }
+          } else {
+            birthDateInput.classList.add("error");
             displayError(
               birthDateInput,
               errorSpanDate,
-              "The only dates formats acceptable is dd/mm/aaaa"
+              "The date cant be lower than 1920 and cant be higher than today "
             );
           }
         } else {
+          birthDateInput.classList.add("error");
           displayError(
             birthDateInput,
             errorSpanDate,
-            "The date can be lower than 1920 and cant be higher than today "
+            "The date can only be form of numers and the format is dd/mm/aaaa"
           );
         }
       } else {
+        birthDateInput.classList.add("error");
         displayError(
           birthDateInput,
           errorSpanDate,
@@ -158,6 +170,7 @@ window.addEventListener("load", function () {
         );
       }
     } else {
+      birthDateInput.classList.add("error");
       displayError(
         birthDateInput,
         errorSpanDate,
@@ -168,6 +181,7 @@ window.addEventListener("load", function () {
   function validatePhone() {
     var phone = phoneInput.value.trim();
     if (!onlyNumbers(phone) || phone.length != 10) {
+      phoneInput.classList.add("error");
       displayError(
         phoneInput,
         errorSpanPhone,
@@ -177,17 +191,23 @@ window.addEventListener("load", function () {
   }
   function validateAddress() {
     var address = addressInput.value.trim();
-    if (!AlphanumericWhitSpace(address) || address.length < 5) {
+    if (
+      !AlphanumericWhitSpace(address) ||
+      address.length < 5 ||
+      address.length > 20
+    ) {
+      addressInput.classList.add("error");
       displayError(
         addressInput,
         errorSpanAddress,
-        "La direccion debe contener solo numeros, letras y solo un espacio y tener al menos 5 caracteres."
+        "The address must contain only numbers, letters and only one space and have at least 5 characters and no more than 20"
       );
     }
   }
   function validateLocation() {
     var location = locationInput.value.trim();
     if (!Alphanumeric(location) || location.length < 4) {
+      locationInput.classList.add("error");
       displayError(
         locationInput,
         errorSpanLocation,
@@ -198,6 +218,7 @@ window.addEventListener("load", function () {
   function validateZipCode() {
     var zipCode = zipCodeInput.value.trim();
     if (!onlyNumbers(zipCode) || zipCode.length < 4 || zipCode.length > 5) {
+      zipCodeInput.classList.add("error");
       displayError(
         zipCodeInput,
         errorSpanZipCode,
@@ -209,28 +230,36 @@ window.addEventListener("load", function () {
     var email = emailInput.value.trim();
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     if (!emailExpression.test(email)) {
+      emailInput.classList.add("error");
       displayError(emailInput, errorSpanEmail, "Invalid mail format");
     }
   }
   function validatePassword() {
     var password = passwordInput.value.trim();
-    if (!Alphanumeric(password) || password.length < 8) {
+    if (
+      !Alphanumeric(password) ||
+      password.length < 8 ||
+      password.length > 20
+    ) {
+      passwordInput.classList.add("error");
       displayError(
         passwordInput,
         errorSpanPassword,
-        "The password can only have numbers and leters and need to be at least 8 characters long"
+        "The password can only have numbers and leters and need to be at least 8 characters long and no more than 20"
       );
     }
   }
   function validateConfirmPassword() {
     var password = passwordInput.value.trim();
     var confirmPassword = confirmPasswordInput.value.trim();
-    if (confirmPassword != password)
+    if (confirmPassword != password) {
+      confirmPasswordInput.classList.add("error");
       displayError(
         passwordInput,
         errorSpanConfirmPassword,
         "Both passwords neeed to match"
       );
+    }
   }
   function validateAll() {
     validateName();
@@ -393,5 +422,4 @@ window.addEventListener("load", function () {
         });
     }
   });
-  //#endregion
 });

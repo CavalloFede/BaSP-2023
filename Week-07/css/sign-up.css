@@ -38,7 +38,6 @@ form {
   flex-direction: column;
   width: 50%;
 }
-
 .logo {
   width: 117px;
   height: 122px;
@@ -46,7 +45,6 @@ form {
   right: 33px;
   position: fixed;
 }
-
 form [type="submit"] {
   margin-top: 15px;
   border-style: none;
@@ -78,7 +76,6 @@ label {
   font-size: 14px;
   line-height: 16px;
 }
-
 p {
   margin-top: 10px;
   font-weight: 600;
@@ -92,6 +89,14 @@ p {
   width: 50%;
   display: flex;
   flex-direction: column;
+}
+.error-message {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: red;
+}
+.error {
+  border-color: red;
 }
 @media only screen and (min-width: 1025px) {
   body {

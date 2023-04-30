@@ -65,9 +65,6 @@ form [type="submit"] {
   font-size: 16px;
   line-height: 19px;
   color: #2a2a32;
-
-  /* Light Grayish Green - Secondary variant  color */
-
   background: #aace9b;
   border-radius: 5px;
 }
@@ -88,4 +85,8 @@ p {
 .error-message {
   margin-bottom: 5px;
   margin-top: 5px;
+  color: red;
+}
+.error {
+  border-color: red;
 }

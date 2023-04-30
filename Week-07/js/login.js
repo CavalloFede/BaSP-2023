@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
   const stringErrorPass =
     "Password must be at least 8 characters and contain numbers and letters";
   const urlApi = "https://api-rest-server.vercel.app/login?";
-  const userData = this.localStorage.getItem("user");
+  const userData = localStorage.getItem("user");
   if (userData) {
     const user = JSON.parse(userData);
     emailInput.value = user.email;
@@ -87,8 +87,12 @@ window.addEventListener("load", function () {
           datosFormulario.password
       );
     } else {
-      const queryString = `email=${datosFormulario.email}&password=${datosFormulario.password}`;
-
+      const queryString =
+        "email=" +
+        datosFormulario.email +
+        "&password=" +
+        datosFormulario.password;
+      console.log(urlApi + queryString);
       fetch(urlApi + queryString, {
         method: "GET",
       })
@@ -99,7 +103,7 @@ window.addEventListener("load", function () {
           if (data.success) {
             alert("Succes: " + data.msg);
           } else {
-            alert("Error: " + data);
+            alert("Error: " + data.msg);
           }
         })
         .catch(function (error) {
