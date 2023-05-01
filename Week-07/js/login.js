@@ -80,7 +80,6 @@ window.addEventListener("load", function () {
         emailError.textContent = stringErrorMail;
       }
     } else {
-      console.log("aca")
       emailInput.classList.add("error");
       emailError.textContent = "Email is required";
     }

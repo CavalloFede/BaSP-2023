@@ -96,40 +96,69 @@ window.addEventListener("load", function () {
   errorSpanConfirmPassword = document.querySelector("#error-confirmPassword");
   function validateName() {
     var name = nameInput.value.trim();
-    if (!onlyLeters(name) || name.length < 3 || name.length > 20) {
+    if (name == "") {
+      nameInput.classList.add("error");
+      displayError(nameInput, errorSpanName, "Name is required");
+    } else if (name.length < 3 || name.length > 20) {
       nameInput.classList.add("error");
       displayError(
         nameInput,
         errorSpanName,
-        "The name needs to be only leters and have at least 3 characters long and cant be longer than 20"
+        "The name must be between 3 and 20 characters long"
+      );
+    } else if (!onlyLeters(name)) {
+      nameInput.classList.add("error");
+      displayError(
+        nameInput,
+        errorSpanName,
+        "The name needs to be only leters"
       );
     }
   }
   function validateLastName() {
     var lastName = lastNameInput.value.trim();
-    if (!onlyLeters(lastName) || lastName.length < 3 || lastName.length > 20) {
+    if (lastName == "") {
+      lastNameInput.classList.add("error");
+      displayError(lastNameInput, errorSpanLastName, "Lastname is required");
+    } else if (lastName.length < 3 || lastName.length > 20) {
       lastNameInput.classList.add("error");
       displayError(
         lastNameInput,
         errorSpanLastName,
-        "The lastname needs to be only leters and have at least 3 characters long and cant be longer than 20"
+        "The lastname must be between 3 and 20 characters long"
+      );
+    } else if (!onlyLeters(lastName)) {
+      lastNameInput.classList.add("error");
+      displayError(
+        lastNameInput,
+        errorSpanLastName,
+        "The lastname needs to be only leters"
       );
     }
   }
   function validateDni() {
     var dni = dniInput.value.trim();
-    if (!onlyNumbers(dni) || dni.length < 7 || dni.length > 8) {
+    if (dni == "") {
+      dniInput.classList.add("error");
+      displayError(dniInput, errorSpanDni, "DNI is required");
+    } else if (dni.length < 7 || dni.length > 8) {
       dniInput.classList.add("error");
       displayError(
         dniInput,
         errorSpanDni,
-        "DNI needs to be only numbers and must have between 7 and 8 numbers"
+        "DNI needs to be between 7 and 8 numbers"
       );
+    } else if (!onlyNumbers(dni)) {
+      dniInput.classList.add("error");
+      displayError(dniInput, errorSpanDni, "DNI needs to be only numbers");
     }
   }
   function validateDate() {
     var date = birthDateInput.value;
-    if (date.length == 10) {
+    if (date == "") {
+      birthDateInput.classList.add("error");
+      displayError(birthDateInput, errorSpanDate, "Birth day is required");
+    } else if (date.length == 10) {
       if (date.charAt(2) == "/" && date.charAt(5) == "/") {
         const dia = parseInt(date.substring(0, 2));
         const mes = parseInt(date.substring(3, 5)) - 1;
@@ -180,79 +209,131 @@ window.addEventListener("load", function () {
   }
   function validatePhone() {
     var phone = phoneInput.value.trim();
-    if (!onlyNumbers(phone) || phone.length != 10) {
+    if (phone == "") {
+      phoneInput.classList.add("error");
+      displayError(phoneInput, errorSpanPhone, "Phone is required");
+    } else if (phone.length != 10) {
       phoneInput.classList.add("error");
       displayError(
         phoneInput,
         errorSpanPhone,
-        "The phone number can only contain numbers and needs to be 10 characters long"
+        "The phone number can only be 10 characters long"
+      );
+    } else if (!onlyNumbers(phone)) {
+      phoneInput.classList.add("error");
+      displayError(
+        phoneInput,
+        errorSpanPhone,
+        "The phone number can only contain numbers"
       );
     }
   }
   function validateAddress() {
     var address = addressInput.value.trim();
-    if (
-      !AlphanumericWhitSpace(address) ||
-      address.length < 5 ||
-      address.length > 20
-    ) {
+    if (address == "") {
+      addressInput.classList.add("error");
+      displayError(addressInput, errorSpanAddress, "Address is required");
+    } else if (address.length < 5 || address.length > 20) {
       addressInput.classList.add("error");
       displayError(
         addressInput,
         errorSpanAddress,
-        "The address must contain only numbers, letters and only one space and have at least 5 characters and no more than 20"
+        "The address must be between 5 and 20 characters long"
+      );
+    } else if (!AlphanumericWhitSpace(address)) {
+      addressInput.classList.add("error");
+      displayError(
+        addressInput,
+        errorSpanAddress,
+        "The address must contain only numbers, letters and only one space"
       );
     }
   }
   function validateLocation() {
     var location = locationInput.value.trim();
-    if (!Alphanumeric(location) || location.length < 4) {
+    if (location == "") {
+      locationInput.classList.add("error");
+      displayError(locationInput, errorSpanLocation, "Location is required");
+    } else if (location.length < 4 || location.length > 20) {
       locationInput.classList.add("error");
       displayError(
         locationInput,
         errorSpanLocation,
-        "The location can only contain numbers and leters and need to be at least 4 characters long"
+        "The location must be between 4 and 20 characters long"
+      );
+    } else if (!Alphanumeric(location)) {
+      locationInput.classList.add("error");
+      displayError(
+        locationInput,
+        errorSpanLocation,
+        "The location can only contain numbers and leters"
       );
     }
   }
   function validateZipCode() {
     var zipCode = zipCodeInput.value.trim();
-    if (!onlyNumbers(zipCode) || zipCode.length < 4 || zipCode.length > 5) {
+    if (zipCode == "") {
+      zipCodeInput.classList.add("error");
+      displayError(zipCodeInput, errorSpanZipCode, "Zip code is required");
+    } else if (zipCode.length < 4 || zipCode.length > 5) {
       zipCodeInput.classList.add("error");
       displayError(
         zipCodeInput,
         errorSpanZipCode,
-        "The Zip code need to be made only of numbers an be between 4 and 5 characters long"
+        "The Zip code must be between 4 and 5 characters long"
+      );
+    } else if (!onlyNumbers(zipCode)) {
+      zipCodeInput.classList.add("error");
+      displayError(
+        zipCodeInput,
+        errorSpanZipCode,
+        "The Zip code need to be made only of numbers"
       );
     }
   }
   function validateEmail() {
     var email = emailInput.value.trim();
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    if (!emailExpression.test(email)) {
+    if (email == "") {
+      emailInput.classList.add("error");
+      displayError(emailInput, errorSpanEmail, "Email is required");
+    } else if (!emailExpression.test(email)) {
       emailInput.classList.add("error");
       displayError(emailInput, errorSpanEmail, "Invalid mail format");
     }
   }
   function validatePassword() {
     var password = passwordInput.value.trim();
-    if (
-      !Alphanumeric(password) ||
-      password.length < 8 ||
-      password.length > 20
-    ) {
+    if (password == "") {
+      passwordInput.classList.add("error");
+      displayError(passwordInput, errorSpanPassword, "Password is required");
+    } else if (password.length < 8 || password.length > 20) {
       passwordInput.classList.add("error");
       displayError(
         passwordInput,
         errorSpanPassword,
-        "The password can only have numbers and leters and need to be at least 8 characters long and no more than 20"
+        "The password must be between 8 and 20 characters long"
+      );
+    } else if (!Alphanumeric(password)) {
+      passwordInput.classList.add("error");
+      displayError(
+        passwordInput,
+        errorSpanPassword,
+        "The password must be made of numbers and leters"
       );
     }
   }
   function validateConfirmPassword() {
     var password = passwordInput.value.trim();
     var confirmPassword = confirmPasswordInput.value.trim();
-    if (confirmPassword != password) {
+    if (confirmPassword == "") {
+      confirmPasswordInput.classList.add("error");
+      displayError(
+        confirmPasswordInput,
+        errorSpanConfirmPassword,
+        "Confirm password is required"
+      );
+    } else if (confirmPassword != password) {
       confirmPasswordInput.classList.add("error");
       displayError(
         passwordInput,
