@@ -142,7 +142,7 @@ window.addEventListener("load", function () {
               displayError(
                 birthDateInput,
                 errorSpanDate,
-                "The only dates formats acceptable is dd/mm/aaaa"
+                "The only dates formats acceptable is mm/dd/aaaa"
               );
             }
           } else {
@@ -158,7 +158,7 @@ window.addEventListener("load", function () {
           displayError(
             birthDateInput,
             errorSpanDate,
-            "The date can only be form of numers and the format is dd/mm/aaaa"
+            "The date can only be form of numers and the format is mm/dd/aaaa"
           );
         }
       } else {
@@ -166,7 +166,7 @@ window.addEventListener("load", function () {
         displayError(
           birthDateInput,
           errorSpanDate,
-          "The only dates formats acceptable is dd/mm/aaaa"
+          "The only dates formats acceptable is mm/dd/aaaa"
         );
       }
     } else {
@@ -174,7 +174,7 @@ window.addEventListener("load", function () {
       displayError(
         birthDateInput,
         errorSpanDate,
-        "The only dates formats acceptable is dd/mm/aaaa"
+        "The only dates formats acceptable is mm/dd/aaaa"
       );
     }
   }

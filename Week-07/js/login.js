@@ -22,7 +22,6 @@ window.addEventListener("load", function () {
   function validarPassword(password) {
     let hasLetter = false;
     let hasNumber = false;
-    let hasLength = password.length >= 8;
     for (let i = 0; i < password.length; i++) {
       const charCode = password.charCodeAt(i);
       if (!isNaN(charCode) && charCode >= 48 && charCode <= 57) {
@@ -34,18 +33,29 @@ window.addEventListener("load", function () {
         hasLetter = true;
       }
     }
+    let hasLength = password.length >= 8;
     return hasLetter && hasNumber && hasLength;
   }
   emailInput.addEventListener("blur", function () {
-    if (!validarEmail(emailInput.value)) {
+    if (emailInput.value != "") {
+      if (!validarEmail(emailInput.value)) {
+        emailInput.classList.add("error");
+        emailError.textContent = stringErrorMail;
+      }
+    } else {
       emailInput.classList.add("error");
-      emailError.textContent = stringErrorMail;
+      emailError.textContent = "Required";
     }
   });
   passwordInput.addEventListener("blur", function () {
-    if (!validarPassword(passwordInput.value)) {
+    if (passwordInput.value != "") {
+      if (!validarPassword(passwordInput.value)) {
+        passwordInput.classList.add("error");
+        passError.textContent = stringErrorPass;
+      }
+    } else {
       passwordInput.classList.add("error");
-      passError.textContent = stringErrorPass;
+      passError.textContent = "Required";
     }
   });
   emailInput.addEventListener("focus", limpiarErrores);
@@ -64,13 +74,24 @@ window.addEventListener("load", function () {
       email: emailInput.value,
       password: passwordInput.value,
     };
-    if (!validarEmail(datosFormulario.email)) {
+    if (datosFormulario.email != "") {
+      if (!validarEmail(emailInput.email)) {
+        emailInput.classList.add("error");
+        emailError.textContent = stringErrorMail;
+      }
+    } else {
+      console.log("aca")
       emailInput.classList.add("error");
-      emailError.textContent = stringErrorMail;
+      emailError.textContent = "Email is required";
     }
-    if (!validarPassword(datosFormulario.password)) {
+    if (datosFormulario.password != "") {
+      if (!validarPassword(datosFormulario.password)) {
+        passwordInput.classList.add("error");
+        passError.textContent = stringErrorPass;
+      }
+    } else {
       passwordInput.classList.add("error");
-      passError.textContent = stringErrorPass;
+      passError.textContent = "Password is required";
     }
     if (
       emailInput.classList.contains("error") ||
