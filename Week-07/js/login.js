@@ -75,7 +75,7 @@ window.addEventListener("load", function () {
       password: passwordInput.value,
     };
     if (datosFormulario.email != "") {
-      if (!validarEmail(emailInput.email)) {
+      if (!validarEmail(datosFormulario.email)) {
         emailInput.classList.add("error");
         emailError.textContent = stringErrorMail;
       }
